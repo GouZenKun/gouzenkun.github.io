@@ -1,0 +1,113 @@
+[
+  {
+    "id": "aether-raytracer",
+    "title": {
+      "en": "Aether Raytracer",
+      "th": "เอนจินติดตามแสง Aether",
+      "ja": "Aether レイトレーサー"
+    },
+    "subtitle": {
+      "en": "Rust & WebGPU Path Tracing Engine",
+      "th": "เอนจินจำลองแสงด้วย Rust และ WebGPU",
+      "ja": "Rust & WebGPU パストレーシングエンジン"
+    },
+    "description": {
+      "en": "A high-performance path tracing engine built in Rust and WebGPU, featuring BVH spatial trees, volumetric dispersion, and physical caustics.",
+      "th": "เอนจินจำลองแสง (Path tracing) ประสิทธิภาพสูงเขียนด้วย Rust และ WebGPU มีโครงสร้าง BVH ในการคำนวณแสงปริมาตร และการหักเหของแสงเสมือนจริง",
+      "ja": "RustとWebGPUで構築された高性能パストレーシングエンジン。BVH空間木、ボリューム散乱、および物理的コースティクスを搭載。"
+    },
+    "details": {
+      "en": "Aether Raytracer is a physical simulation playground. It computes light paths through complex geometries using Bounding Volume Hierarchy (BVH) trees, volumetric fog, Monte Carlo integration, and microfacet BRDFs. Running natively in Rust, it compiles to WebAssembly (WASM) and utilizes WebGPU shaders to display real-time path-traced previews inside modern browsers.",
+      "th": "เอนจินจำลองแสง Aether เป็นสนามทดลองทางฟิสิกส์กราฟิก คำนวณเส้นทางเดินแสงผ่านเรขาคณิตที่ซับซ้อนโดยใช้โครงสร้างต้นไม้แบ่งพื้นที่ (BVH), เมฆหมอกปริมาตร, การรวมตัวแบบมอนเตการ์โล และทฤษฎีการสะท้อนระดับไมโคร (microfacet BRDFs) ระบบทำงานบนภาษา Rust แท้ คอมไพล์เป็น WebAssembly (WASM) เพื่อใช้งานร่วมกับ WebGPU เชดเดอร์สำหรับแสดงตัวอย่างแสงจริงบนเบราว์เซอร์ได้แบบเรียลไทม์",
+      "ja": "Aether Raytracerは、物理シミュレーションの実験場です。バウンディングボリューム階層（BVH）木、ボリュームフォグ、モンテカルロ積分、およびマイクロファセットBRDFモデルを使用して、複雑な幾何学形状を通る光の経路を計算します。Rustでネイティブに動作し、WebAssembly（WASM）にコンパイルされ、WebGPUシェーダーを利用してブラウザ内でリアルタイムのパストレーシングプレビューを表示します。"
+    },
+    "images": [
+      "/images/raytracer_1.png",
+      "/images/raytracer_2.png",
+      "/images/raytracer_3.png"
+    ],
+    "tags": ["Rust", "WebGPU", "Ray Tracing", "WASM", "Graphics Programming"],
+    "role": {
+      "en": "Core Engine Developer",
+      "th": "ผู้พัฒนาเอนจินหลัก",
+      "ja": "コアエンジン開発者"
+    },
+    "date": "January 2026",
+    "link": "https://raytracer.demo.example.com",
+    "github": "https://github.com/example/aether-raytracer"
+  },
+  {
+    "id": "sumie-fluid",
+    "title": {
+      "en": "Sumi-e Fluid Dynamics",
+      "th": "พลศาสตร์ของไหลสไตล์พู่กันญี่ปุ่น",
+      "ja": "墨絵流体力学シミュレーション"
+    },
+    "subtitle": {
+      "en": "Stable Fluids Japanese Ink Simulation",
+      "th": "การจำลองการกระจายของหมึกพู่กันญี่ปุ่นแบบ Stable Fluids",
+      "ja": "Stable Fluids 墨絵シミュレーション"
+    },
+    "description": {
+      "en": "A real-time GPU-accelerated fluid simulation recreating the delicate bleeding and diffusion dynamics of traditional Japanese charcoal ink.",
+      "th": "การจำลองของไหลที่ประมวลผลบนการ์ดจอ (GPU) เพื่อเลียนแบบการซึมและการแพร่กระจายอันบอบบางของน้ำหมึกถ่านถ่านหินญี่ปุ่นแบบดั้งเดิม",
+      "ja": "伝統的な日本の和墨の繊細な滲みや拡散ダイナミクスを再現する、リアルタイムGPU加速流体シミュレーション。"
+    },
+    "details": {
+      "en": "This graphics experiment applies Jos Stam's Stable Fluids solver to replicate traditional Japanese Sumi-e painting. Operating fully inside WebGL fragment shaders, it calculates velocity projection, advection, and vorticity confinement at 60 FPS. Moving the mouse acts as a wet bamboo brush, causing ink carbon particles to diffuse and bleed organically onto procedural washi paper textures.",
+      "th": "การทดลองทางกราฟิกชิ้นนี้ใช้ตัวแก้ปัญหา Stable Fluids ของ Jos Stam เพื่อจำลองภาพวาดพู่กันญี่ปุ่นแบบดั้งเดิม (Sumi-e) ระบบทำงานอย่างสมบูรณ์ภายใน WebGL แฟรกเมนต์เชดเดอร์ คำนวณการพ่นเวกเตอร์ความเร็ว การพาของไหล และการกักขังแรงหมุน (vorticity) ที่ความเร็ว 60 เฟรมต่อวินาที การขยับเมาส์จะทำหน้าที่เสมือนพู่กันไม้ไผ่ที่เปียกชื้น ทำให้อนุภาคคาร์บอนของน้ำหมึกแพร่กระจายและซึมเข้าหากันอย่างธรรมชาติบนพื้นผิวกระดาษวาชิแบบโปรซีดิวรัล",
+      "ja": "このグラフィックス実験は、Jos StamのStable Fluidsソルバーを応用して、日本の伝統的な墨絵を再現したものです。WebGLフラグメントシェーダー内で完全に動作し、速度投影、移流、および渦度閉じ込めを60 FPSで計算します。マウスの動きが濡れた竹筆のように機能し、墨の炭素粒子がプロシーデュラルな和紙テクスチャの上に有機的に拡散し、滲んでいきます。"
+    },
+    "images": [
+      "/images/sumie_1.png",
+      "/images/sumie_2.png",
+      "/images/sumie_3.png"
+    ],
+    "tags": ["WebGL", "GLSL Shaders", "Fluid Dynamics", "Math", "Creative Coding"],
+    "role": {
+      "en": "Shaders Developer",
+      "th": "นักพัฒนาเชดเดอร์",
+      "ja": "シェーダー開発者"
+    },
+    "date": "March 2026",
+    "link": "https://sumie.demo.example.com",
+    "github": "https://github.com/example/sumie-fluids"
+  },
+  {
+    "id": "zen-sand-garden",
+    "title": {
+      "en": "Zen Sand Ripples Sandbox",
+      "th": "กระบะทรายจำลองคลื่นเซน",
+      "ja": "禅庭・砂紋のサンドボックス"
+    },
+    "subtitle": {
+      "en": "Procedural Geometry Tessellation Shader",
+      "th": "เชดเดอร์เปลี่ยนรูปทรงเรขาคณิตแบบสุ่มและเพิ่มความละเอียดผิว",
+      "ja": "プロシーデュラル・テッセレーションシェーダー"
+    },
+    "description": {
+      "en": "A procedural landscape simulator generating raked gravel fields and river stones using custom fractional Brownian noise maps.",
+      "th": "โปรแกรมจำลองทิวทัศน์แบบสุ่มเพื่อสร้างลวดลายคลื่นบนลานกรวดทรายและหินก้อนใหญ่ โดยใช้แผนที่สัญญาณรบกวน fBm แบบกำหนดเอง",
+      "ja": "カスタムの分数ブラウン運動（fBm）ノイズマップを使用して、熊手でひかれた砂紋や川の石を生成するプロシーデュラル地形シミュレータ。"
+    },
+    "details": {
+      "en": "This interactive sandbox generates procedural Zen dry gardens. Utilizing customized vertex displacement and tessellation shaders in Three.js, it computes raked gravel patterns around random rock boulders. Users can dynamically rake the sand beds, generating concentric height waves that deform smoothly around stone collision meshes.",
+      "th": "กระบะทรายแบบโต้ตอบนี้สร้างสวนแห้งนิกายเซนแบบสุ่ม โดยใช้เชดเดอร์ย้ายตำแหน่งจุดยอด (vertex displacement) และเชดเดอร์แบ่งย่อยหน้าผิว (tessellation) ที่กำหนดเองใน Three.js คำนวณลวดลายลานกรวดรอบก้อนหิน ผู้ใช้งานสามารถคราดสวนทรายเพื่อสร้างคลื่นความสูงร่วมศูนย์กลางที่บิดตัวหลบแนวหินชนได้อย่างสวยงามและแม่นยำ",
+      "ja": "このインタラクティブなサンドボックスは、プロシーデュラルな枯山水を生成します。Three.jsのカスタマイズされた頂点変位とテッセレーションシェーダーを利用して、ランダムに配置された岩の周囲に描かれる砂紋パターンを計算します。ユーザーは動的に砂床を耕す（掃く）ことができ、石の衝突メッシュの周囲を滑らかに変形する同心円状の高さの波紋を発生させることができます。"
+    },
+    "images": [
+      "/images/zensand_1.png",
+      "/images/zensand_2.png",
+      "/images/zensand_3.png"
+    ],
+    "tags": ["Three.js", "GLSL Shaders", "Procedural Generation", "WebGL", "TypeScript"],
+    "role": {
+      "en": "Graphics Developer",
+      "th": "นักพัฒนากราฟิกโปรแกรม",
+      "ja": "グラフィックス開発者"
+    },
+    "date": "May 2026",
+    "link": "https://zensand.demo.example.com",
+    "github": "https://github.com/example/zen-sand-garden"
+  }
+]

@@ -1,0 +1,128 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #1a1733;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.slideContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.activeSlide {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.inactiveSlide {
+  opacity: 0;
+  transform: scale(1.05);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.controlButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: rgba(19, 16, 36, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.75rem;
+  font-weight: 300;
+  line-height: 1;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.controlButton:hover {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.prevButton {
+  left: 1.25rem;
+}
+
+.nextButton {
+  right: 1.25rem;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  gap: 0.5rem;
+  background: rgba(19, 16, 36, 0.5);
+  backdrop-filter: blur(8px);
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.indicatorDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--text-secondary);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.5;
+  transition: var(--transition-smooth);
+}
+
+.indicatorDot:hover {
+  opacity: 0.8;
+}
+
+.activeDot {
+  width: 18px;
+  border-radius: 9999px;
+  background-color: var(--accent-primary);
+  opacity: 1;
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1a1733;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  border-radius: 12px;
+}

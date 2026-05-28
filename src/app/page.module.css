@@ -1,0 +1,236 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8rem 2rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 2;
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.heroTag {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  color: #a7f3d0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.heroDesc {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.ctaPrimary {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.ctaPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45);
+}
+
+.ctaSecondary {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-glass);
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+}
+
+.ctaSecondary:hover {
+  color: var(--text-primary);
+  border-color: var(--border-glass-hover);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+/* About Section */
+.about {
+  padding: 6rem 2rem;
+  width: 100%;
+  position: relative;
+}
+
+.aboutContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem;
+  border-color: var(--border-glass);
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.aboutTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.aboutDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.aboutDetails strong {
+  color: var(--text-primary);
+}
+
+/* Contact Section */
+.contact {
+  padding: 6rem 2rem 8rem;
+  width: 100%;
+}
+
+.contactContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contactHeader h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.contactHeader p {
+  color: var(--text-secondary);
+}
+
+.contactBox {
+  padding: 2.5rem;
+  border-color: var(--border-glass);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.emailLink {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.emailLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  transform: scaleX(0.3);
+  transition: var(--transition-bounce);
+}
+
+.emailLink:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+}
+
+.emailLink:hover::after {
+  transform: scaleX(1);
+}
+
+/* Footer Section */
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* Responsive UI */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.75rem;
+  }
+  
+  .heroDesc {
+    font-size: 1.05rem;
+  }
+  
+  .heroActions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .aboutContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+  
+  .contactBox {
+    padding: 1.5rem;
+  }
+  
+  .emailLink {
+    font-size: 1.15rem;
+  }
+}
