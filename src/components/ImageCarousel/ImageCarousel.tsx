@@ -69,6 +69,26 @@ export default function ImageCarousel({
 
   return (
     <div className={styles.carousel}>
+      {/* Dynamic Circular Progress Timer */}
+      {images.length > 1 && (
+        <div className={styles.timerIndicator} key={currentIndex}>
+          <svg className={styles.timerSvg} width="28" height="28" viewBox="0 0 28 28">
+            <circle
+              className={styles.timerBg}
+              cx="14"
+              cy="14"
+              r="11"
+            />
+            <circle
+              className={styles.timerFg}
+              cx="14"
+              cy="14"
+              r="11"
+              style={{ animationDuration: `${autoPlayInterval}ms` }}
+            />
+          </svg>
+        </div>
+      )}
       <div className={styles.slideContainer}>
         {images.map((img, idx) => (
           <div

@@ -43,7 +43,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer} style={{ position: "relative", zIndex: 2, background: "rgba(6, 10, 7, 0.95)" }}>
-        <p>&copy; {new Date().getFullYear()} Antigravity Studio. Handcrafted with Next.js & Clean Code.</p>
+        <p>&copy; {new Date().getFullYear()} Thanakit Gowitwanich. Handcrafted with Next.js & Clean Code.</p>
       </footer>
     </div>
   );

@@ -52,8 +52,8 @@ export default function AboutPage() {
                 <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", fontWeight: "700", textTransform: "uppercase" }}>
                   {t.contactDirect}
                 </p>
-                <a href="mailto:hello@antigravity.studio" className={styles.emailLink} style={{ fontSize: "1.25rem" }}>
-                  hello@antigravity.studio
+                <a href="mailto:thanakitgowitwanich@gmail.com" className={styles.emailLink} style={{ fontSize: "1.25rem" }}>
+                  thanakitgowitwanich@gmail.com
                 </a>
               </div>
             </div>
@@ -62,7 +62,7 @@ export default function AboutPage() {
       </main>
 
       <footer className={styles.footer}>
-        <p>&copy; {new Date().getFullYear()} Antigravity Studio. Handcrafted with Next.js & Clean Code.</p>
+        <p>&copy; {new Date().getFullYear()} Thanakit Gowitwanich. Handcrafted with Next.js & Clean Code.</p>
       </footer>
     </div>
   );

@@ -14,7 +14,7 @@ export default function PortfolioPage() {
       </main>
 
       <footer className={styles.footer}>
-        <p>&copy; {new Date().getFullYear()} Antigravity Studio. Handcrafted with Next.js & Clean Code.</p>
+        <p>&copy; {new Date().getFullYear()} Thanakit Gowitwanich. Handcrafted with Next.js & Clean Code.</p>
       </footer>
     </div>
   );

@@ -126,3 +126,53 @@
   font-size: 0.9rem;
   border-radius: 12px;
 }
+
+.timerIndicator {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  background: rgba(13, 19, 14, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  pointer-events: none; /* Let clicks pass through */
+}
+
+.timerSvg {
+  display: block;
+}
+
+.timerBg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 2.2;
+}
+
+.timerFg {
+  fill: none;
+  stroke: var(--accent-primary);
+  stroke-width: 2.2;
+  stroke-dasharray: 69.115;
+  stroke-dashoffset: 69.115;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  animation: runTimer linear forwards;
+}
+
+@keyframes runTimer {
+  from {
+    stroke-dashoffset: 69.115;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}

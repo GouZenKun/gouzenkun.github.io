@@ -14,7 +14,7 @@ export default function Navbar() {
       <div className={styles.container}>
         <Link href="/" className={styles.logoGroup}>
           <div className={styles.logoIcon}></div>
-          <span className={`${styles.logoText} text-gradient`}>ANTIGRAVITY</span>
+          <span className={`${styles.logoText} text-gradient`}>THANAKIT</span>
         </Link>
         
         <nav className={styles.nav}>
