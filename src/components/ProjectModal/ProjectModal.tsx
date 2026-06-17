@@ -56,7 +56,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
           <div className={styles.infoSection}>
             <span className={styles.dateBadge}>{project.date}</span>
-            <h2 className={`${styles.title} text-gradient`}>{project.title[language] || ""}</h2>
+            <h2 className={`${styles.title} text-gradient`}>{project.flag} {project.title[language] || ""}</h2>
             <p className={styles.subtitle}>{project.subtitle[language] || ""}</p>
 
             <div className={styles.metaGrid}>

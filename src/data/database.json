@@ -1,113 +1,283 @@
 [
   {
-    "id": "aether-raytracer",
+    "id": "paint-knockout",
+    "flag": "🇯🇵",
     "title": {
-      "en": "Aether Raytracer",
-      "th": "เอนจินติดตามแสง Aether",
-      "ja": "Aether レイトレーサー"
+      "en": "Paint Knock Out",
+      "th": "เพนต์น็อกเอาต์ (Paint Knock Out)",
+      "ja": "Paint Knock Out"
     },
     "subtitle": {
-      "en": "Rust & WebGPU Path Tracing Engine",
-      "th": "เอนจินจำลองแสงด้วย Rust และ WebGPU",
-      "ja": "Rust & WebGPU パストレーシングエンジン"
+      "en": "Coin-Earning Action Game & Laravel Server",
+      "th": "เกมแอคชั่นสะสมเหรียญและระบบเซิร์ฟเวอร์ Laravel",
+      "ja": "コイン稼ぎアクションゲーム＆Laravelサーバー"
     },
     "description": {
-      "en": "A high-performance path tracing engine built in Rust and WebGPU, featuring BVH spatial trees, volumetric dispersion, and physical caustics.",
-      "th": "เอนจินจำลองแสง (Path tracing) ประสิทธิภาพสูงเขียนด้วย Rust และ WebGPU มีโครงสร้าง BVH ในการคำนวณแสงปริมาตร และการหักเหของแสงเสมือนจริง",
-      "ja": "RustとWebGPUで構築された高性能パストレーシングエンジン。BVH空間木、ボリューム散乱、および物理的コースティクスを搭載。"
+      "en": "Fullstack development of an action game, integrating mobile stores, AppsFlyer telemetry, ironSource ad mediation, and a Laravel backend.",
+      "th": "การพัฒนาฟูลสแต็กเกมแอคชั่นบนมือถือ เชื่อมต่อระบบสโตร์ โฆษณา ironSource ตัววัดผล AppsFlyer และเซิร์ฟเวอร์ Laravel",
+      "ja": "Laravelバックエンド、ironSource広告メディエーション、AppsFlyer分析、各種アプリストア連携を統合したアクションゲーム of フルスタック開発。"
     },
     "details": {
-      "en": "Aether Raytracer is a physical simulation playground. It computes light paths through complex geometries using Bounding Volume Hierarchy (BVH) trees, volumetric fog, Monte Carlo integration, and microfacet BRDFs. Running natively in Rust, it compiles to WebAssembly (WASM) and utilizes WebGPU shaders to display real-time path-traced previews inside modern browsers.",
-      "th": "เอนจินจำลองแสง Aether เป็นสนามทดลองทางฟิสิกส์กราฟิก คำนวณเส้นทางเดินแสงผ่านเรขาคณิตที่ซับซ้อนโดยใช้โครงสร้างต้นไม้แบ่งพื้นที่ (BVH), เมฆหมอกปริมาตร, การรวมตัวแบบมอนเตการ์โล และทฤษฎีการสะท้อนระดับไมโคร (microfacet BRDFs) ระบบทำงานบนภาษา Rust แท้ คอมไพล์เป็น WebAssembly (WASM) เพื่อใช้งานร่วมกับ WebGPU เชดเดอร์สำหรับแสดงตัวอย่างแสงจริงบนเบราว์เซอร์ได้แบบเรียลไทม์",
-      "ja": "Aether Raytracerは、物理シミュレーションの実験場です。バウンディングボリューム階層（BVH）木、ボリュームフォグ、モンテカルロ積分、およびマイクロファセットBRDFモデルを使用して、複雑な幾何学形状を通る光の経路を計算します。Rustでネイティブに動作し、WebAssembly（WASM）にコンパイルされ、WebGPUシェーダーを利用してブラウザ内でリアルタイムのパストレーシングプレビューを表示します。"
+      "en": "For this blockchain-affiliated game at LLC DMM.com, Thanakit managed full-stack deployment and operations. Responsibilities included developing game features, handling App Store and Google Play console submissions, setting up user telemetry with AppsFlyer, managing ad mediation (ironSource, AdMob, AppLovin), and implementing Jenkins CI/CD build pipelines and AWS/on-premise Laravel servers.",
+      "th": "สำหรับโปรเจกต์นี้ที่ LLC DMM.com คุณธนกิตรับผิดชอบการดูแลระบบแบบฟูลสแต็กทั้งหมด ตั้งแต่การนำส่งขึ้น App Store และ Google Play Store, ระบบเก็บสถิติ AppsFlyer, ตัวควบคุมรายได้โฆษณา ironSource, ท่อส่ง Jenkins CI/CD และระบบเซิร์ฟเวอร์หลังบ้าน Laravel บนคลาวด์ AWS และเซิร์ฟเวอร์จริง",
+      "ja": "合同会社DMM.comにおけるブロックチェーンゲーム開発において、クライアントおよびサーバーの運用管理全般を担当。App StoreおよびGoogle Playの審査提出、AppsFlyerによるデータ収集、ironSource等による広告収益化、Laravel管理パネル開発、Jenkinsビルドパイプライン作成まで多岐にわたるフルスタック業務を遂行。"
     },
     "images": [
-      "/images/raytracer_1.png",
-      "/images/raytracer_2.png",
-      "/images/raytracer_3.png"
+      "/images/paint_knockout_1.png",
+      "/images/paint_knockout_2.png"
     ],
-    "tags": ["Rust", "WebGPU", "Ray Tracing", "WASM", "Graphics Programming"],
+    "tags": ["Unity", "C#", "Laravel", "PHP", "AWS", "Jenkins", "ironSource", "AppsFlyer"],
     "role": {
-      "en": "Core Engine Developer",
-      "th": "ผู้พัฒนาเอนจินหลัก",
-      "ja": "コアエンジン開発者"
+      "en": "Full-Stack Game Engineer",
+      "th": "วิศวกรเกมฟูลสแต็ก",
+      "ja": "フルスタックゲームエンジニア"
     },
-    "date": "January 2026",
-    "link": "https://raytracer.demo.example.com",
-    "github": "https://github.com/example/aether-raytracer"
+    "date": "2024/07 - 2024/10",
+    "link": "https://paint-knockout.demo.example.com"
   },
   {
-    "id": "sumie-fluid",
+    "id": "dream-casino",
+    "flag": "🇯🇵",
     "title": {
-      "en": "Sumi-e Fluid Dynamics",
-      "th": "พลศาสตร์ของไหลสไตล์พู่กันญี่ปุ่น",
-      "ja": "墨絵流体力学シミュレーション"
+      "en": "Dream Casino (Temp)",
+      "th": "ดรีมคาสิโน (ชื่อชั่วคราว)",
+      "ja": "ドリームカジノ（仮）"
     },
     "subtitle": {
-      "en": "Stable Fluids Japanese Ink Simulation",
-      "th": "การจำลองการกระจายของหมึกพู่กันญี่ปุ่นแบบ Stable Fluids",
-      "ja": "Stable Fluids 墨絵シミュレーション"
+      "en": "Table Game Metaverse & Server-Side Rendering",
+      "th": "เกมโต๊ะเมตาเวิร์สและระบบเรนเดอร์ผ่านเซิร์ฟเวอร์",
+      "ja": "テーブルゲームメタバース＆サーバーサイドレンダリング"
     },
     "description": {
-      "en": "A real-time GPU-accelerated fluid simulation recreating the delicate bleeding and diffusion dynamics of traditional Japanese charcoal ink.",
-      "th": "การจำลองของไหลที่ประมวลผลบนการ์ดจอ (GPU) เพื่อเลียนแบบการซึมและการแพร่กระจายอันบอบบางของน้ำหมึกถ่านถ่านหินญี่ปุ่นแบบดั้งเดิม",
-      "ja": "伝統的な日本の和墨の繊細な滲みや拡散ダイナミクスを再現する、リアルタイムGPU加速流体シミュレーション。"
+      "en": "A table game metaverse featuring Cinemachine camera controls, WebGL performance tuning, and WebSocket real-time networking.",
+      "th": "เกมเมตาเวิร์สบอร์ดเกมโต๊ะคาสิโนที่มีกล้องเคลื่อนไหว Cinemachine, ระบบเรนเดอร์ผ่านเซิร์ฟเวอร์ และการสื่อสารผ่าน WebSocket",
+      "ja": "Cinemachineによるカメラ制御、WebGLのパフォーマンスチューニング、およびWebSocketによるリアルタイム通信を備えたテーブルゲームメタバース。"
     },
     "details": {
-      "en": "This graphics experiment applies Jos Stam's Stable Fluids solver to replicate traditional Japanese Sumi-e painting. Operating fully inside WebGL fragment shaders, it calculates velocity projection, advection, and vorticity confinement at 60 FPS. Moving the mouse acts as a wet bamboo brush, causing ink carbon particles to diffuse and bleed organically onto procedural washi paper textures.",
-      "th": "การทดลองทางกราฟิกชิ้นนี้ใช้ตัวแก้ปัญหา Stable Fluids ของ Jos Stam เพื่อจำลองภาพวาดพู่กันญี่ปุ่นแบบดั้งเดิม (Sumi-e) ระบบทำงานอย่างสมบูรณ์ภายใน WebGL แฟรกเมนต์เชดเดอร์ คำนวณการพ่นเวกเตอร์ความเร็ว การพาของไหล และการกักขังแรงหมุน (vorticity) ที่ความเร็ว 60 เฟรมต่อวินาที การขยับเมาส์จะทำหน้าที่เสมือนพู่กันไม้ไผ่ที่เปียกชื้น ทำให้อนุภาคคาร์บอนของน้ำหมึกแพร่กระจายและซึมเข้าหากันอย่างธรรมชาติบนพื้นผิวกระดาษวาชิแบบโปรซีดิวรัล",
-      "ja": "このグラフィックス実験は、Jos StamのStable Fluidsソルバーを応用して、日本の伝統的な墨絵を再現したものです。WebGLフラグメントシェーダー内で完全に動作し、速度投影、移流、および渦度閉じ込めを60 FPSで計算します。マウスの動きが濡れた竹筆のように機能し、墨の炭素粒子がプロシーデュラルな和紙テクスチャの上に有機的に拡散し、滲んでいきます。"
+      "en": "As Lead Client Engineer at extramile Inc., Thanakit designed animations and camera controls using Cinemachine and Spring Bone. The architecture featured server-side rendering using Anbox Cloud, Apache Guacamole, and WebSockets. Integrated high-performance plugins like UniTask, UniRx, MasterMemory, MessagePack, and VContainer dependency injection.",
+      "th": "ในฐานะหัวหน้านักพัฒนาฝ่ายไคลเอนต์ที่ extramile Inc. คุณธนกิตรับผิดชอบการออกแบบระบบกล้อง Cinemachine และ Spring Bone, เชื่อมต่อระบบสตรีมหน้าจอผ่านเซิร์ฟเวอร์โดยใช้ Anbox Cloud และ Apache Guacamole, และนำเข้าปลั๊กอินประสิทธิภาพสูงอย่าง UniTask, UniRx, MasterMemory, MessagePack และ VContainer",
+      "ja": "extramile株式会社におけるリードクライアントエンジニアとして、テーブルゲームのメタバース開発を担当。InputSystemやCinemachine、Spring Boneを用いたアニメーション制御に加え、Anbox CloudやApache Guacamoleを用いたクラウドレンダリング、WebSocket/ICEプロトコル連携、VContainerやMessagePack等の高度な最適化ライブラリの設計を実施。"
     },
     "images": [
-      "/images/sumie_1.png",
-      "/images/sumie_2.png",
-      "/images/sumie_3.png"
+      "/images/dream_casino_1.png",
+      "/images/dream_casino_2.png"
     ],
-    "tags": ["WebGL", "GLSL Shaders", "Fluid Dynamics", "Math", "Creative Coding"],
+    "tags": ["Unity", "C#", "WebGL", "URP Shaders", "WebSockets", "VContainer", "MessagePack"],
     "role": {
-      "en": "Shaders Developer",
-      "th": "นักพัฒนาเชดเดอร์",
-      "ja": "シェーダー開発者"
+      "en": "Lead Client Engineer",
+      "th": "หัวหน้าวิศวกรฝ่ายไคลเอนต์",
+      "ja": "リードクライアントエンジニア"
     },
-    "date": "March 2026",
-    "link": "https://sumie.demo.example.com",
-    "github": "https://github.com/example/sumie-fluids"
+    "date": "2024/01 - 2024/06"
   },
   {
-    "id": "zen-sand-garden",
+    "id": "pachislo-metaverse",
+    "flag": "🇯🇵",
     "title": {
-      "en": "Zen Sand Ripples Sandbox",
-      "th": "กระบะทรายจำลองคลื่นเซน",
-      "ja": "禅庭・砂紋のサンドボックス"
+      "en": "Pachislo Metaverse (Temp)",
+      "th": "พาทิสล็อตเมตาเวิร์ส (ชื่อชั่วคราว)",
+      "ja": "パチスロメタバース（仮）"
     },
     "subtitle": {
-      "en": "Procedural Geometry Tessellation Shader",
-      "th": "เชดเดอร์เปลี่ยนรูปทรงเรขาคณิตแบบสุ่มและเพิ่มความละเอียดผิว",
-      "ja": "プロシーデュラル・テッセレーションシェーダー"
+      "en": "Online Casino Table Game Platform",
+      "th": "แพลตฟอร์มบอร์ดเกมคาสิโนออนไลน์",
+      "ja": "オンラインカジノテーブルゲームプラットフォーム"
     },
     "description": {
-      "en": "A procedural landscape simulator generating raked gravel fields and river stones using custom fractional Brownian noise maps.",
-      "th": "โปรแกรมจำลองทิวทัศน์แบบสุ่มเพื่อสร้างลวดลายคลื่นบนลานกรวดทรายและหินก้อนใหญ่ โดยใช้แผนที่สัญญาณรบกวน fBm แบบกำหนดเอง",
-      "ja": "カスタムの分数ブラウン運動（fBm）ノイズマップを使用して、熊手でひかれた砂紋や川の石を生成するプロシーデュラル地形シミュレータ。"
+      "en": "Lead client architecture for a web-based slots metaverse integrating C# with JavaScript, uGUI, and BinanceChain transactions.",
+      "th": "การออกแบบโครงสร้างไคลเอนต์หลักสำหรับเว็บเกมสล็อตเมตาเวิร์ส ที่เชื่อมประสานโค้ด C# และ JavaScript และระบบชำระเงินผ่านบล็อคเชน BinanceChain",
+      "ja": "C#とJavaScriptの連携、uGUI、およびBinanceChainを用いた仮想通貨決済を統合したWebベースのスロットメタバースのリード開発。"
     },
     "details": {
-      "en": "This interactive sandbox generates procedural Zen dry gardens. Utilizing customized vertex displacement and tessellation shaders in Three.js, it computes raked gravel patterns around random rock boulders. Users can dynamically rake the sand beds, generating concentric height waves that deform smoothly around stone collision meshes.",
-      "th": "กระบะทรายแบบโต้ตอบนี้สร้างสวนแห้งนิกายเซนแบบสุ่ม โดยใช้เชดเดอร์ย้ายตำแหน่งจุดยอด (vertex displacement) และเชดเดอร์แบ่งย่อยหน้าผิว (tessellation) ที่กำหนดเองใน Three.js คำนวณลวดลายลานกรวดรอบก้อนหิน ผู้ใช้งานสามารถคราดสวนทรายเพื่อสร้างคลื่นความสูงร่วมศูนย์กลางที่บิดตัวหลบแนวหินชนได้อย่างสวยงามและแม่นยำ",
-      "ja": "このインタラクティブなサンドボックスは、プロシーデュラルな枯山水を生成します。Three.jsのカスタマイズされた頂点変位とテッセレーションシェーダーを利用して、ランダムに配置された岩の周囲に描かれる砂紋パターンを計算します。ユーザーは動的に砂床を耕す（掃く）ことができ、石の衝突メッシュの周囲を滑らかに変形する同心円状の高さの波紋を発生させることができます。"
+      "en": "At Platinum Egg Co., Thanakit served as Lead Client Engineer, designing client architecture and connecting Unity WebGL with external browser scripts. Implemented user interfaces using uGUI and DoTween, and connected Web3 transaction wallets like MetaMask and WalletConnect to the BinanceChain for in-game purchases.",
+      "th": "ณ Platinum Egg Co. คุณธนกิตดูแลระบบไคลเอนต์หลัก เขียนสคริปต์เชื่อมต่อ C# และ JavaScript ของเบราว์เซอร์ภายนอก, ปรับปรุงระบบส่วนต่อประสานด้วย uGUI และ DoTween, และติดตั้งกระเป๋าเงิน Web3 อย่าง MetaMask/WalletConnect เพื่อการชำระเงินและโอนเหรียญผ่านเชน BinanceChain",
+      "ja": "株式会社プラチナエッグにおいてリードクライアントエンジニアを担当。Unity WebGLとブラウザ側JavaScriptの相互連携ブリッジの構築、uGUIとDOTweenを用いた洗練されたUI演出演出のほか、MetaMaskやWalletConnectを用いたBinanceChainでのWeb3決済機能を実装。"
     },
     "images": [
-      "/images/zensand_1.png",
-      "/images/zensand_2.png",
-      "/images/zensand_3.png"
+      "/images/pachislo_metaverse_1.png",
+      "/images/dream_casino_2.png"
     ],
-    "tags": ["Three.js", "GLSL Shaders", "Procedural Generation", "WebGL", "TypeScript"],
+    "tags": ["Unity", "WebGL", "C# & JS Bridge", "MetaMask", "BinanceChain", "WebGLTemplate"],
     "role": {
-      "en": "Graphics Developer",
-      "th": "นักพัฒนากราฟิกโปรแกรม",
-      "ja": "グラフィックス開発者"
+      "en": "Lead Client Engineer",
+      "th": "หัวหน้าวิศวกรฝ่ายไคลเอนต์",
+      "ja": "リードクライアントエンジニア"
     },
-    "date": "May 2026",
-    "link": "https://zensand.demo.example.com",
-    "github": "https://github.com/example/zen-sand-garden"
+    "date": "2023/05 - 2023/12"
+  },
+  {
+    "id": "climbers",
+    "flag": "🇯🇵",
+    "title": {
+      "en": "Climbers",
+      "th": "ไคลม์เบอร์ส (Climbers)",
+      "ja": "Climbers"
+    },
+    "subtitle": {
+      "en": "Online Versus Action Game & Web3 Bridge",
+      "th": "เกมแอคชั่นต่อสู้ออนไลน์และระบบเชื่อมต่อ Web3",
+      "ja": "オンライン対戦アクション＆Web3連携"
+    },
+    "description": {
+      "en": "Optimized WebGL browser builds for an online survival game, connecting MetaMask and Polygon chain transactions.",
+      "th": "การพัฒนาและเพิ่มประสิทธิภาพ WebGL บิลด์สำหรับเกมออนไลน์แนวเอาชีวิตรอด เชื่อมต่อกระเป๋าเงิน MetaMask และเชน Polygon",
+      "ja": "MetaMaskとPolygonチェーン連携による決済機能を備えた、オンライン対戦アクションゲームのWebGLビルド最適化。"
+    },
+    "details": {
+      "en": "Thanakit worked as Client Engineer for the released WebGL game Climbers, ensuring smooth web performance, C# to JS bridging, uGUI layouts, and MetaMask Polygon Chain integrations for NFT and item purchases.",
+      "th": "คุณธนกิตได้ทำงานในฐานะไคลเอนต์エンジニア สำหรับเกมเวอร์ชัน WebGL ของเกม Climbers ที่เปิดให้บริการจริง โดยเพิ่มประสิทธิภาพการทำงานบนเบราว์เซอร์ เขียนเชื่อม C# และ JavaScript, ทำระบบอินเตอร์เฟส uGUI และเชื่อมเชน Polygon ผ่านกระเป๋า MetaMask เพื่อให้ผู้เล่นโอนย้าย NFT และไอเทมเกม",
+      "ja": "リリース済みのオンラインマルチ対戦ゲーム『Climbers』のWebGL版においてクライアントエンジニアを担当。ブラウザ環境特有の最適化、C#とJSのネイティブバインディング連携、uGUI構築、MetaMaskおよびPolygonチェーンを用いたトークン決済の実装などを担当。"
+    },
+    "images": [
+      "/images/climbers_1.png",
+      "/images/climbers_2.png",
+      "/images/dream_casino_2.png"
+    ],
+    "tags": ["WebGL", "Unity", "C# & JS Bridge", "MetaMask", "Polygon", "Zenject"],
+    "role": {
+      "en": "Client Engineer",
+      "th": "วิศวกรฝ่ายไคลเอนต์",
+      "ja": "クライアントエンジニア"
+    },
+    "date": "2023/08 - 2023/10",
+    "link": "https://climbers.show/"
+  },
+  {
+    "id": "axie-nft",
+    "flag": "🇯🇵",
+    "title": {
+      "en": "Axie-like NFT Game (Temp)",
+      "th": "เกม NFT สไตล์ Axie (ชื่อชั่วคราว)",
+      "ja": "AxieぽいNFTゲーム（仮）"
+    },
+    "subtitle": {
+      "en": "Turn-based RPG NFT Battler",
+      "th": "เกมสวมบทบาทสลับตาแนววางแผนและระบบบล็อคเชน",
+      "ja": "ターン制RPG・NFT対戦ゲーム"
+    },
+    "description": {
+      "en": "Designed an MVU architecture for a turn-based RPG containing Spine animations and BinanceChain Web3 integrations.",
+      "th": "ออกแบบโครงสร้างแบบ MVU สำหรับเกมแนว RPG วางแผนสลับตา (Turn-based) ประกอบด้วยแอนิเมชั่นจาก Spine และเชน BinanceChain",
+      "ja": "Spineアニメーション、ターン制バトル処理、およびBinanceChain決済を統合した、ターン制RPG型NFTゲームのMVU設計。"
+    },
+    "details": {
+      "en": "As Lead Client Engineer, Thanakit defined the MVU framework in Unity. Developed battle animation and turn calculation logic, integrated 2D Spine character meshes, and connected Web3 transaction wallets to the BinanceChain.",
+      "th": "ในฐานะหัวหน้าฝ่ายพัฒนาไคลเอนต์ คุณธนกิตออกแบบสถาปัตยกรรมแบบ MVU ใน Unity ทำระบบคำนวณและประมวลผลการต่อสู้แบบสลับตา ติดตั้งแอนิเมชันตัวละคร 2D Spine และเขียนเชื่อมต่อระบบกระเป๋าเงินคริปโตบนเชน BinanceChain",
+      "ja": "リードクライアントエンジニアとして、Unity上でのMVU設計を担当。ターン制バトルの処理ロジック構築、Spine-unityを用いた2Dアニメーション統合、パーティクルシステム演出、MetaMaskおよびBinanceChainを用いたスマートコントラクト決済連携を実行。"
+    },
+    "images": [
+      "/images/axie_nft_1.png",
+      "/images/dream_casino_2.png"
+    ],
+    "tags": ["Unity", "C#", "MVU Architecture", "Spine-unity", "DoTween", "VContainer", "BinanceChain"],
+    "role": {
+      "en": "Lead Client Engineer",
+      "th": "หัวหน้าวิศวกรฝ่ายไคลเอนต์",
+      "ja": "リードクライアントエンジニア"
+    },
+    "date": "2022/08 - 2023/04"
+  },
+  {
+    "id": "sinners-sanctuary",
+    "flag": "🇹🇭",
+    "title": {
+      "en": "Sinner's Sanctuary",
+      "th": "ซินเนอร์ส แซงชัวรี (Sinner's Sanctuary)",
+      "ja": "Sinner’s Sanctuary"
+    },
+    "subtitle": {
+      "en": "Suspense Adventure Game Direction",
+      "th": "ผู้กำกับและหัวหน้าฝ่ายพัฒนาเกมแนวระทึกขวัญสืบสวน",
+      "ja": "サスペンスADVゲーム開発指揮・企画"
+    },
+    "description": {
+      "en": "Directed a suspense adventure game from scratch, handling story pacing, gameplay loops, and vector movement systems.",
+      "th": "ผู้กำกับดูแลการสร้างเกมแนวระทึกขวัญไขคดีตั้งแต่ศูนย์ ออกแบบระบบเคลื่อนไหวและลูปการเล่นเกมหลัก",
+      "ja": "企画・立案から携わり、ゼロからサスペンスアドベンチャーゲームを立ち上げ。キャラクター操作、演出ロジック、およびクリエイティブ管理を実施。"
+    },
+    "details": {
+      "en": "At PUNICA CO., LTD., Thanakit served as Lead Engineer and Director, spearheading project design from the ground up. Directed visual pacing, asset creation pipelines, character control schemes, and layout layouts.",
+      "th": "ณ PUNICA CO., LTD. คุณธนกิตดูแลในบทบาทลีดเอนจินเนอร์และผู้อำนวยการสร้าง โดยเป็นผู้เริ่มสร้างโปรเจกต์นี้ทั้งหมด จัดการการทำงานร่วมกับทีมกราฟิก เขียนระบบการเคลื่อนไหว และกลไกของเกมแนวสำรวจและไขคดี",
+      "ja": "PUNICA CO., LTD.にてリードエンジニアおよびディレクターとして、新規のサスペンスADVプロジェクトをゼロから立ち上げ。ゲームシステム全体の企画、キャラクター操作・イベント演出演出プログラム、イラスト・グラフィックの進行管理を統括。"
+    },
+    "images": [
+      "/images/sinners_sanctuary_1.png",
+      "/images/sinners_sanctuary_2.jpg"
+    ],
+    "tags": ["Unity", "C#", "Game Direction", "Gameplay Loops", "Asset Pipeline"],
+    "role": {
+      "en": "Lead Engineer & Director",
+      "th": "หัวหน้าวิศวกรและผู้กำกับโครงการ",
+      "ja": "リードエンジニア＆ディレクター"
+    },
+    "date": "2019/08 - 2020/03"
+  },
+  {
+    "id": "watson-holmes",
+    "flag": "🇹🇭",
+    "title": {
+      "en": "1880 Watson & Holmes",
+      "th": "1880 วัตสัน แอนด์ โฮมส์ (1880 Watson & Holmes)",
+      "ja": "1880 Watson&Holmes"
+    },
+    "subtitle": {
+      "en": "Otome Puzzle Mobile Game",
+      "th": "เกมนิยายและไขปริศนาสไตล์โอโตเมะบนมือถือ",
+      "ja": "女性向けパズル・アドベンチャーゲーム"
+    },
+    "description": {
+      "en": "Supported planning, UI wireframes, and test play for a detective puzzle game targeted at female audiences.",
+      "th": "ออกแบบระบบและวางแผนการเล่นเกมไขปริศนาแนวสืบสวนสำหรับกลุ่มเป้าหมายผู้หญิง, ทำต้นแบบอินเตอร์เฟส และร่วมทดสอบเกม",
+      "ja": "女性向けの探偵パズルゲームにおいて、企画、UIデザインの設計、およびテストプレイ・バランスチェックを担当。"
+    },
+    "details": {
+      "en": "Thanakit worked as a Planner at PUNICA CO., LTD., facilitating communications between original novel writers and developer programmers. Contributed to user interface layouts, scenario editing, and rigorous testplay checks.",
+      "th": "คุณธนกิตทำงานในบทบาทแพลนเนอร์ที่ PUNICA CO., LTD. เป็นผู้ประสานงานระหว่างนักเขียนนิยายต้นฉบับและทีมเขียนโปรแกรม ช่วยวางแผนโครงร่าง UI, ตรวจทานและแก้ไขบทเนื้อหาในเกม และประสานการทดสอบระบบก่อนส่งออก",
+      "ja": "PUNICA CO., LTD.にてプランナーとして従画。原作者と社内開発チーム間の技術仕様 of 調整役を務めるほか、UIワイヤーフレームの設計、シナリオ進行補助、およびプレイアビリティ向上のためのテストプレイを牽引。"
+    },
+    "images": [
+      "/images/watson_holmes_1.png"
+    ],
+    "tags": ["Unity", "Game Planning", "UI Design", "Scenario Support", "Testplay"],
+    "role": {
+      "en": "Game Planner",
+      "th": "นักวางแผนระบบเกม",
+      "ja": "プランナー"
+    },
+    "date": "2019/06 - 2020/03"
+  },
+  {
+    "id": "warlord-dark",
+    "flag": "🇹🇭",
+    "title": {
+      "en": "Warlord of the Dark",
+      "th": "วอร์ลอร์ดออฟเดอะดาร์ก (Warlord of the Dark)",
+      "ja": "Warlord of the dark"
+    },
+    "subtitle": {
+      "en": "Co-op & Versus Board Game Design",
+      "th": "ออกแบบเกมบอร์ดแนวร่วมมือและต่อสู้กระดาน",
+      "ja": "協力・対戦型ボードゲーム設計"
+    },
+    "description": {
+      "en": "Designed competitive versus game mechanics and balanced play testing for a multiplayer tabletop experience.",
+      "th": "ออกแบบกลไกโหมดต่อสู้กระดานและการจำลองการ์ดปรับสมดุลความสามารถสำหรับเกมกระดานผู้เล่นหลายคน",
+      "ja": "複数人向けテーブルトップ体験における、対戦モードのゲームデザインおよび高度なバランス調整を担当。"
+    },
+    "details": {
+      "en": "Working as a Planner, Thanakit focused on designing the versus mode metrics, establishing math-based balancing models, and leading testplays to ensure competitive integrity and engagement.",
+      "th": "ในฐานะแพลนเนอร์ คุณธนกิตมุ่งเน้นการออกแบบกฎกติกาการแข่งขันสำหรับโหมด Versus, การวัดและเขียนตารางคำนวณสมดุลการ์ด และจัดตารางทดสอบการเล่นเพื่อหาช่องโหว่ความสมดุลของบอร์ดเกม",
+      "ja": "プランナーとして協力・対戦ボードゲーム開発に参画。特に対戦モードのシステム設計、勝率を均等化するためのパラメータ数値調整、およびテストプレイ時のフィードバック分析に焦点を当ててバランス調整を主導。"
+    },
+    "images": [
+      "/images/warlord_dark_1.jpg"
+    ],
+    "tags": ["Game Design", "Tabletop Board Game", "Versus Mode", "Balance Tuning", "Math Models"],
+    "role": {
+      "en": "Game Designer & Planner",
+      "th": "นักออกแบบเกมและนักวางแผน",
+      "ja": "プランナー"
+    },
+    "date": "2019/06 - 2019/10"
   }
 ]

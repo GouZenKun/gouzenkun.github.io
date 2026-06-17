@@ -10,4 +10,5 @@ export interface Project {
   date: string;
   link?: string;
   github?: string;
+  flag: string; // e.g. "🇯🇵" or "🇹🇭"
 }

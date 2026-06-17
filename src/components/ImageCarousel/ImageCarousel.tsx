@@ -69,26 +69,6 @@ export default function ImageCarousel({
 
   return (
     <div className={styles.carousel}>
-      {/* Dynamic Circular Progress Timer */}
-      {images.length > 1 && (
-        <div className={styles.timerIndicator} key={currentIndex}>
-          <svg className={styles.timerSvg} width="28" height="28" viewBox="0 0 28 28">
-            <circle
-              className={styles.timerBg}
-              cx="14"
-              cy="14"
-              r="11"
-            />
-            <circle
-              className={styles.timerFg}
-              cx="14"
-              cy="14"
-              r="11"
-              style={{ animationDuration: `${autoPlayInterval}ms` }}
-            />
-          </svg>
-        </div>
-      )}
       <div className={styles.slideContainer}>
         {images.map((img, idx) => (
           <div
@@ -121,7 +101,22 @@ export default function ImageCarousel({
             className={`${styles.controlButton} ${styles.nextButton}`}
             aria-label="Next image"
           >
-            &#x203a;
+            <span className={styles.arrowIcon}>&#x203a;</span>
+            <svg className={styles.buttonTimerSvg} width="44" height="44" viewBox="0 0 44 44" key={currentIndex}>
+              <circle
+                className={styles.buttonTimerBg}
+                cx="22"
+                cy="22"
+                r="19.5"
+              />
+              <circle
+                className={styles.buttonTimerFg}
+                cx="22"
+                cy="22"
+                r="19.5"
+                style={{ animationDuration: `${autoPlayInterval}ms` }}
+              />
+            </svg>
           </button>
 
           <div className={styles.indicators}>

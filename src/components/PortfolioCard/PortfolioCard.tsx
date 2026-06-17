@@ -31,7 +31,7 @@ export default function PortfolioCard({ project, onClick }: PortfolioCardProps) 
         <div className={styles.header}>
           <span className={styles.date}>{project.date}</span>
         </div>
-        <h3 className={styles.title}>{project.title[language] || ""}</h3>
+        <h3 className={styles.title}>{project.flag} {project.title[language] || ""}</h3>
         <p className={styles.description}>{project.description[language] || ""}</p>
         
         <div className={styles.tagsContainer}>
