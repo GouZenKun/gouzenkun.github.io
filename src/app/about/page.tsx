@@ -36,11 +36,47 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Right Section: Contact Channels */}
+            {/* Right Section: Contact Channels & Career Milestones */}
             <div className={styles.contactContainer} style={{ width: "100%", maxWidth: "100%" }}>
+              {/* Career Milestones / Stats Badges Extracted from Docx */}
+              <div className={styles.milestonesContainer}>
+                <h3 className={styles.milestonesTitle}>{t.aboutMilestones}</h3>
+                <div className={styles.milestonesGrid}>
+                  <div className={styles.milestoneCard}>
+                    <img 
+                      src="/images/badge_projects.png" 
+                      alt={t.badgeProjectsTitle} 
+                      className={styles.milestoneImage} 
+                    />
+                    <div className={styles.milestoneValue}>{t.badgeProjectsTitle}</div>
+                    <div className={styles.milestoneLabel}>{t.badgeProjectsDesc}</div>
+                  </div>
+                  
+                  <div className={styles.milestoneCard}>
+                    <img 
+                      src="/images/badge_experience.png" 
+                      alt={t.badgeExperienceTitle} 
+                      className={styles.milestoneImage} 
+                    />
+                    <div className={styles.milestoneValue}>{t.badgeExperienceTitle}</div>
+                    <div className={styles.milestoneLabel}>{t.badgeExperienceDesc}</div>
+                  </div>
+                  
+                  <div className={styles.milestoneCard}>
+                    <img 
+                      src="/images/badge_released.png" 
+                      alt={t.badgeReleasedTitle} 
+                      className={styles.milestoneImage} 
+                    />
+                    <div className={styles.milestoneValue}>{t.badgeReleasedTitle}</div>
+                    <div className={styles.milestoneLabel}>{t.badgeReleasedDesc}</div>
+                  </div>
+                </div>
+              </div>
+
               <div className={styles.contactHeader} style={{ textAlign: "left" }}>
                 <span className={styles.heroTag}>{t.contactTag}</span>
-                <h3 style={{ fontSize: "2rem", fontWeight: "800", marginTop: "0.5rem", marginBottom: "0.5rem" }}>
+                <h3 style={{ fontSize: "2.00rem", fontWeight: "800", marginTop: "0.5rem", marginBottom: "0.5rem" }}>
                   {t.contactTitle}
                 </h3>
                 <p style={{ color: "var(--text-secondary)", fontSize: "0.95rem" }}>

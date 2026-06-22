@@ -33,6 +33,13 @@ export const TRANSLATIONS = {
     aboutBio2: "My professional path centers on building highly optimized, pixel-perfect user interfaces with Next.js, React, and custom HTML5/WebGL shaders. I specialize in creating fluid canvas simulations, high-telemetry dashboards, and secure financial products that perform smoothly at 60 FPS on any modern screen.",
     aboutBio3: "I actively align every piece of code with SOLID design principles, separating business logic and dynamic database stores from aesthetic layouts.",
     aboutCore: "Core Disciplines",
+    aboutMilestones: "Career Highlights",
+    badgeProjectsTitle: "8 Projects",
+    badgeProjectsDesc: "Games & Web3 Apps",
+    badgeExperienceTitle: "3+ Years",
+    badgeExperienceDesc: "Dev Experience",
+    badgeReleasedTitle: "2 Released",
+    badgeReleasedDesc: "App Store Titles",
     contactTag: "GET IN TOUCH",
     contactTitle: "Let's Craft Something Magnificent",
     contactDesc: "Have an ambitious system visualizer or a performance-critical interactive page in mind? Let's connect.",
@@ -43,7 +50,16 @@ export const TRANSLATIONS = {
     modalTech: "Technologies",
     modalRole: "Role",
     modalVisit: "Visit Live Project",
-    modalSource: "Source Code"
+    modalSource: "Source Code",
+
+    // Skills Page
+    navSkills: "Technical Skills",
+    skillsSubtitle: "SKILLSETS",
+    skillsTitle: "Technical Skills",
+    skillsDesc: "A deep dive into core competencies, design architectures, and engineering frameworks refined across professional roles in Japan and Thailand.",
+    roleExperience: "Experience",
+    roleCoreSkills: "Core Technologies & Libraries",
+    roleProjectsTitle: "Showcases Built Using These Skills"
   },
   th: {
     // Navbar
@@ -77,6 +93,13 @@ export const TRANSLATIONS = {
     aboutBio2: "เส้นทางวิชาชีพของฉันมุ่งเน้นไปที่การสร้างส่วนต่อประสานผู้ใช้ที่ทำงานได้อย่างมีประสิทธิภาพสูงสุดและสมบูรณ์แบบในระดับพิกเซลด้วย Next.js, React และเชดเดอร์ HTML5/WebGL ฉันเชี่ยวชาญในการสร้างการจำลองของไหลบนแคนวาส แดชบอร์ดที่มีข้อมูลการตรวจวัดสูง และผลิตภัณฑ์ทางการเงินที่ปลอดภัย ซึ่งแสดงผลได้อย่างลื่นไหลที่ 60 FPS บนทุกหน้าจอสมัยใหม่",
     aboutBio3: "ฉันจัดวางโค้ดทุกส่วนอย่างเป็นระบบตามหลักการออกแบบ SOLID เพื่อให้แน่ใจว่าตรรกะทางธุรกิจและฐานข้อมูลแบบไดนามิกจะแยกออกจากส่วนการแสดงผลอย่างสมบูรณ์",
     aboutCore: "ความเชี่ยวชาญหลัก",
+    aboutMilestones: "ไฮไลต์การทำงาน",
+    badgeProjectsTitle: "8 โครงการ",
+    badgeProjectsDesc: "เกม & เว็บ3 แอพ",
+    badgeExperienceTitle: "3+ ปี",
+    badgeExperienceDesc: "ประสบการณ์พัฒนาเกม",
+    badgeReleasedTitle: "เปิดตัวแล้ว 2",
+    badgeReleasedDesc: "เกมบนแอพสโตร์",
     contactTag: "ติดต่อฉัน",
     contactTitle: "มาร่วมสร้างสรรค์สิ่งที่ยิ่งใหญ่ด้วยกัน",
     contactDesc: "หากคุณมีโปรแกรมแสดงภาพระบบที่ซับซ้อนหรือหน้าเว็บแบบโต้ตอบที่เน้นประสิทธิภาพการทำงานสูง สามารถติดต่อฉันได้ทันที",
@@ -87,7 +110,16 @@ export const TRANSLATIONS = {
     modalTech: "เทคโนโลยีที่ใช้",
     modalRole: "บทบาทหน้าที่",
     modalVisit: "เข้าชมเว็บไซต์จริง",
-    modalSource: "ซอร์สโค้ด"
+    modalSource: "ซอร์สโค้ด",
+
+    // Skills Page
+    navSkills: "ทักษะทางเทคนิค",
+    skillsSubtitle: "ชุดทักษะความสามารถ",
+    skillsTitle: "ทักษะทางเทคนิค",
+    skillsDesc: "เจาะลึกทักษะหลัก สถาปัตยกรรมซอฟต์แวร์ และเฟรมเวิร์กวิศวกรรมที่ได้รับการพัฒนาผ่านการทำงานจริงในญี่ปุ่นและไทย",
+    roleExperience: "ประสบการณ์",
+    roleCoreSkills: "เทคโนโลยี & ไลบรารีหลัก",
+    roleProjectsTitle: "โครงการที่สร้างโดยใช้ทักษะเหล่านี้"
   },
   ja: {
     // Navbar
@@ -121,6 +153,13 @@ export const TRANSLATIONS = {
     aboutBio2: "主に、Next.js、React、およびカスタムHTML5/WebGLシェーダーを使用した、高度に最適化され、ピクセルパーフェクトなUIの構築に取り組んでいます。キャンバス上の流体シミュレーション、高度なリアルタイム監視ダッシュボード、セキュアな金融システムなど、あらゆるデバイスで60 FPSの滑らかなレンダリング性能を提供します。",
     aboutBio3: "すべてのコードをSOLIDの設計原則に準拠させ、ビジネスロジックやデータソースをプレゼンテーションレイヤーから完全に分離しています。",
     aboutCore: "主な専門分野",
+    aboutMilestones: "主な実績",
+    badgeProjectsTitle: "8 プロジェクト数",
+    badgeProjectsDesc: "ゲーム ＆ Web3",
+    badgeExperienceTitle: "3年+ 開発経験",
+    badgeExperienceDesc: "ゲーム開発キャリア",
+    badgeReleasedTitle: "2 リリース数",
+    badgeReleasedDesc: "ストア配信タイトル",
     contactTag: "お問い合わせ",
     contactTitle: "壮大なものを共に創り上げましょう",
     contactDesc: "複雑なデータの視覚化システムや、パフォーマンスが極めて重要なインタラクティブなサイト開発をお考えですか？お気軽にご相談ください。",
@@ -131,6 +170,15 @@ export const TRANSLATIONS = {
     modalTech: "使用技術",
     modalRole: "担当ロール",
     modalVisit: "ライブデモを開く",
-    modalSource: "ソースコード"
+    modalSource: "ソースコード",
+
+    // Skills Page
+    navSkills: "技術スキル",
+    skillsSubtitle: "スキルセット",
+    skillsTitle: "技術スキル",
+    skillsDesc: "日本とタイでの開発プロジェクトを通じて磨かれた、コアコンピテンシー、システム設計、およびエンジニアリングフレームワークの詳細。",
+    roleExperience: "実務経験",
+    roleCoreSkills: "主要テクノロジー＆ライブラリ",
+    roleProjectsTitle: "このスキルで構築されたプロジェクト"
   }
 };

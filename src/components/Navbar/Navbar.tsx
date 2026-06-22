@@ -21,6 +21,9 @@ export default function Navbar() {
           <Link href="/portfolio" className={styles.navLink}>
             {TRANSLATIONS[language].navPortfolio}
           </Link>
+          <Link href="/skills" className={styles.navLink}>
+            {TRANSLATIONS[language].navSkills}
+          </Link>
           <Link href="/about" className={styles.navLink}>
             {TRANSLATIONS[language].navAbout}
           </Link>

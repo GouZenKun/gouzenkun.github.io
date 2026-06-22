@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { Project } from "../../types/portfolio";
 import { useLanguage } from "@/context/LanguageContext";
 import { TRANSLATIONS } from "@/data/translations";
@@ -19,6 +19,26 @@ export default function PortfolioGrid({ projects }: PortfolioGridProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [activeProject, setActiveProject] = useState<Project | null>(null);
+
+  // Check URL hash to automatically open a project modal (for links from skills page)
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (typeof window !== "undefined" && window.location.hash) {
+        const hashId = window.location.hash.replace("#", "");
+        const matched = projects.find((proj) => proj.id === hashId);
+        if (matched) {
+          setActiveProject(matched);
+        }
+      }
+    };
+
+    // Run on initial mount
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, [projects]);
 
   // 1. Gather all unique tags from the projects list
   const uniqueTags = useMemo(() => {
