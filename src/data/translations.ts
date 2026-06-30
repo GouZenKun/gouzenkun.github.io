@@ -59,7 +59,8 @@ export const TRANSLATIONS = {
     skillsDesc: "A deep dive into core competencies, design architectures, and engineering frameworks refined across professional roles in Japan and Thailand.",
     roleExperience: "Experience",
     roleCoreSkills: "Core Technologies & Libraries",
-    roleProjectsTitle: "Showcases Built Using These Skills"
+    roleProjectsTitle: "Showcases Built Using These Skills",
+    skillsLegend: "★ indicates professional project / work experience."
   },
   th: {
     // Navbar
@@ -119,7 +120,8 @@ export const TRANSLATIONS = {
     skillsDesc: "เจาะลึกทักษะหลัก สถาปัตยกรรมซอฟต์แวร์ และเฟรมเวิร์กวิศวกรรมที่ได้รับการพัฒนาผ่านการทำงานจริงในญี่ปุ่นและไทย",
     roleExperience: "ประสบการณ์",
     roleCoreSkills: "เทคโนโลยี & ไลบรารีหลัก",
-    roleProjectsTitle: "โครงการที่สร้างโดยใช้ทักษะเหล่านี้"
+    roleProjectsTitle: "โครงการที่สร้างโดยใช้ทักษะเหล่านี้",
+    skillsLegend: "★ ระบุถึงทักษะที่มีประสบการณ์ทำงานจริงในโปรเจกต์"
   },
   ja: {
     // Navbar
@@ -179,6 +181,7 @@ export const TRANSLATIONS = {
     skillsDesc: "日本とタイでの開発プロジェクトを通じて磨かれた、コアコンピテンシー、システム設計、およびエンジニアリングフレームワークの詳細。",
     roleExperience: "実務経験",
     roleCoreSkills: "主要テクノロジー＆ライブラリ",
-    roleProjectsTitle: "このスキルで構築されたプロジェクト"
+    roleProjectsTitle: "このスキルで構築されたプロジェクト",
+    skillsLegend: "★は実際のプロジェクトでの開発実務経験を示します。"
   }
 };

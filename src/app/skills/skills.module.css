@@ -154,6 +154,15 @@
   padding-left: 0.75rem;
 }
 
+.legendText {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  opacity: 0.8;
+  margin-top: -0.75rem;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
 .skillsGrid {
   display: grid;
   grid-template-columns: 1fr;

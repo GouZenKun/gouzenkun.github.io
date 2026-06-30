@@ -264,6 +264,7 @@ export default function SkillsPage() {
               {/* Skills Progress list */}
               <div className={styles.skillsSection}>
                 <h3 className={styles.sectionTitle}>{t.roleCoreSkills}</h3>
+                <span className={styles.legendText}>{t.skillsLegend}</span>
                 <div className={styles.skillsGrid} style={{ maxHeight: "450px", overflowY: "auto", paddingRight: "0.5rem" }}>
                   {(() => {
                     const maxYears = Math.max(...currentRole.skills.map((s) => s.years), 1);
@@ -281,11 +282,11 @@ export default function SkillsPage() {
                         }
                       } else {
                         if (language === "th") {
-                          labelText = "(เรียนรู้ด้วยตนเอง)";
+                          labelText = `${skill.years} ปี`;
                         } else if (language === "ja") {
-                          labelText = "(独学)";
+                          labelText = `${skill.years}年`;
                         } else {
-                          labelText = "(Self-Study)";
+                          labelText = skill.years === 1 ? "1 Year" : `${skill.years} Years`;
                         }
                       }
 
