@@ -64,6 +64,12 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 <span className={styles.metaLabel}>{t.modalRole}</span>
                 <span className={styles.metaValue}>{project.role[language] || ""}</span>
               </div>
+              <div className={styles.metaItem}>
+                <span className={styles.metaLabel}>{t.modalCategory}</span>
+                <span className={`${styles.badge} ${project.isProfessional ? styles.badgeProfessional : styles.badgePersonal}`}>
+                  {project.isProfessional ? t.projProfessional : t.projPersonal}
+                </span>
+              </div>
             </div>
 
             <div className={styles.divider}></div>

@@ -1,5 +1,52 @@
 [
   {
+    "id": "oblivion-maiden",
+    "flag": "🎮",
+    "title": {
+      "en": "Oblivion Maiden",
+      "th": "Oblivion Maiden",
+      "ja": "Oblivion Maiden"
+    },
+    "subtitle": {
+      "en": "Exploration Adventure & RPG Maker MZ Steam Release",
+      "th": "เกมผจญภัยไขปริศนาและการเปิดตัวบน Steam ด้วย RPG Maker MZ",
+      "ja": "探索アドベンチャー＆RPGツクールMZによるSteamリリース"
+    },
+    "description": {
+      "en": "An exploration adventure set in a magical academy and dream worlds, fully voiced and released on Steam.",
+      "th": "เกมผจญภัยไขปริศนาสำรวจโรงเรียนเวทมนตร์และโลกแห่งความฝัน ให้เสียงพากย์เต็มรูปแบบและเปิดตัวบน Steam",
+      "ja": "魔法学校と夢の世界を舞台にした探索アドベンチャーゲーム。フルボイスでSteamにてリリース。"
+    },
+    "details": {
+      "en": "Developed using the RPG Maker MZ engine, Oblivion Maiden is a fully-voiced exploration adventure set in St. Dorothia Academy, a magical institution hidden within a forest. Co-developed with a partner under the label Project Ex Libris, players navigate mysterious phenomena, solve puzzles, and traverse dream worlds shaped by students' hearts to uncover the truth.",
+      "th": "Oblivion Maiden ได้รับการพัฒนาโดยใช้เอนจิ้น RPG Maker MZ โดยเป็นเกมผจญภัยไขปริศนาแบบมีเสียงพากย์เต็มรูปแบบ ตั้งอยู่ในโรงเรียนเวทมนตร์เซนต์โดโรเธียที่ซ่อนอยู่ในป่า ร่วมกันพัฒนากับพาร์ทเนอร์ในชื่อทีม Project Ex Libris ผู้เล่นต้องเดินทางผ่านปรากฏการณ์ลึกลับและโลกแห่งความฝันที่เกิดขึ้นจากจิตใจของนักเรียนเพื่อค้นหาความจริง",
+      "ja": "RPGツクールMZを用いて共同開発された『Oblivion Maiden』は、森の奥深くにある魔法学校「セント・ドロテア・アカデミー」を舞台にしたフルボイスの探索アドベンチャーゲーム。「Project Ex Libris」のチーム名で制作され、プレイヤーは不思議な現象や、生徒たちの心が生み出した夢の世界を旅しながら、隠された真実を解き明かしていきます。"
+    },
+    "images": [
+      "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4521430/9e5efa94fe7edb09f0ea72caf34ce4c73e8dc009/header.jpg?t=1782969856",
+      "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4521430/902a099a9d9578ce946e6ec38187ea071db04649/ss_902a099a9d9578ce946e6ec38187ea071db04649.1920x1080.jpg?t=1782969856",
+      "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4521430/7f8b6c12b3b3d1e3b5b556d693f96ef5f7890454/ss_7f8b6c12b3b3d1e3b5b556d693f96ef5f7890454.1920x1080.jpg?t=1782969856",
+      "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4521430/768dc44b693dddfec4fdd2fb5aef8aa790f4e5b5/ss_768dc44b693dddfec4fdd2fb5aef8aa790f4e5b5.1920x1080.jpg?t=1782969856"
+    ],
+    "tags": [
+      "RPG Maker MZ",
+      "JavaScript",
+      "Adventure",
+      "Pixel Graphics",
+      "Steam Release",
+      "Game Design",
+      "Sound Design"
+    ],
+    "role": {
+      "en": "Indie Developer",
+      "th": "นักพัฒนาอินดี้",
+      "ja": "インディー開発者"
+    },
+    "date": "2026/06 (Released)",
+    "link": "https://store.steampowered.com/app/4521430/Oblivion_Maiden",
+    "isProfessional": false
+  },
+  {
     "id": "paint-knockout",
     "flag": "🇯🇵",
     "title": {
@@ -26,14 +73,24 @@
       "/images/paint_knockout_1.png",
       "/images/paint_knockout_2.png"
     ],
-    "tags": ["Unity", "C#", "Laravel", "PHP", "AWS", "Jenkins", "ironSource", "AppsFlyer"],
+    "tags": [
+      "Unity",
+      "C#",
+      "Laravel",
+      "PHP",
+      "AWS",
+      "Jenkins",
+      "ironSource",
+      "AppsFlyer"
+    ],
     "role": {
       "en": "Full-Stack Game Engineer",
       "th": "วิศวกรเกมฟูลสแต็ก",
       "ja": "フルスタックゲームエンジニア"
     },
     "date": "2024/07 - 2024/10",
-    "link": "https://paint-knockout.demo.example.com"
+    "link": "https://paint-knockout.demo.example.com",
+    "isProfessional": true
   },
   {
     "id": "dream-casino",
@@ -62,13 +119,66 @@
       "/images/dream_casino_1.png",
       "/images/dream_casino_2.png"
     ],
-    "tags": ["Unity", "C#", "WebGL", "URP Shaders", "WebSockets", "VContainer", "MessagePack"],
+    "tags": [
+      "Unity",
+      "C#",
+      "WebGL",
+      "URP Shaders",
+      "WebSockets",
+      "VContainer",
+      "MessagePack"
+    ],
     "role": {
       "en": "Lead Client Engineer",
       "th": "หัวหน้าวิศวกรฝ่ายไคลเอนต์",
       "ja": "リードクライアントエンジニア"
     },
-    "date": "2024/01 - 2024/06"
+    "date": "2024/01 - 2024/06",
+    "isProfessional": true
+  },
+  {
+    "id": "axie-nft",
+    "flag": "🇯🇵",
+    "title": {
+      "en": "Axie-like NFT Game (Temp)",
+      "th": "เกม NFT สไตล์ Axie (ชื่อชั่วคราว)",
+      "ja": "AxieぽいNFTゲーム（仮）"
+    },
+    "subtitle": {
+      "en": "Turn-based RPG NFT Battler",
+      "th": "เกมสวมบทบาทสลับตาแนววางแผนและระบบบล็อคเชน",
+      "ja": "ターン制RPG・NFT対戦ゲーム"
+    },
+    "description": {
+      "en": "Designed an MVU architecture for a turn-based RPG containing Spine animations and BinanceChain Web3 integrations.",
+      "th": "ออกแบบโครงสร้างแบบ MVU สำหรับเกมแนว RPG วางแผนสลับตา (Turn-based) ประกอบด้วยแอนิเมชั่นจาก Spine และเชน BinanceChain",
+      "ja": "Spineアニメーション、ターン制バトル処理、およびBinanceChain決済を統合した、ターン制RPG型NFTゲームのMVU設計。"
+    },
+    "details": {
+      "en": "As Lead Client Engineer, Thanakit defined the MVU framework in Unity. Developed battle animation and turn calculation logic, integrated 2D Spine character meshes, and connected Web3 transaction wallets to the BinanceChain.",
+      "th": "ในฐานะหัวหน้าฝ่ายพัฒนาไคลเอนต์ คุณธนกิตออกแบบสถาปัตยกรรมแบบ MVU ใน Unity ทำระบบคำนวณและประมวลผลการต่อสู้แบบสลับตา ติดตั้งแอนิเมชันตัวละคร 2D Spine และเขียนเชื่อมต่อระบบกระเป๋าเงินคริปโตบนเชน BinanceChain",
+      "ja": "リードクライアントエンジニアとして、Unity上でのMVU設計を担当。ターン制バトルの処理ロジック構築、Spine-unityを用いた2Dアニメーション統合、パーティクルシステム演出、MetaMaskおよびBinanceChainを用いたスマートコントラクト決済連携を実行。"
+    },
+    "images": [
+      "/images/axie_nft_1.png",
+      "/images/dream_casino_2.png"
+    ],
+    "tags": [
+      "Unity",
+      "C#",
+      "MVU Architecture",
+      "Spine-unity",
+      "DoTween",
+      "VContainer",
+      "BinanceChain"
+    ],
+    "role": {
+      "en": "Lead Client Engineer",
+      "th": "หัวหน้าวิศวกรฝ่ายไคลเอนต์",
+      "ja": "リードクライアントエンジニア"
+    },
+    "date": "2022/08 - 2023/04",
+    "isProfessional": true
   },
   {
     "id": "pachislo-metaverse",
@@ -97,13 +207,21 @@
       "/images/pachislo_metaverse_1.png",
       "/images/dream_casino_2.png"
     ],
-    "tags": ["Unity", "WebGL", "C# & JS Bridge", "MetaMask", "BinanceChain", "WebGLTemplate"],
+    "tags": [
+      "Unity",
+      "WebGL",
+      "C# & JS Bridge",
+      "MetaMask",
+      "BinanceChain",
+      "WebGLTemplate"
+    ],
     "role": {
       "en": "Lead Client Engineer",
       "th": "หัวหน้าวิศวกรฝ่ายไคลเอนต์",
       "ja": "リードクライアントエンジニア"
     },
-    "date": "2023/05 - 2023/12"
+    "date": "2023/05 - 2023/12",
+    "isProfessional": true
   },
   {
     "id": "climbers",
@@ -133,49 +251,22 @@
       "/images/climbers_2.png",
       "/images/dream_casino_2.png"
     ],
-    "tags": ["WebGL", "Unity", "C# & JS Bridge", "MetaMask", "Polygon", "Zenject"],
+    "tags": [
+      "WebGL",
+      "Unity",
+      "C# & JS Bridge",
+      "MetaMask",
+      "Polygon",
+      "Zenject"
+    ],
     "role": {
       "en": "Client Engineer",
       "th": "วิศวกรฝ่ายไคลเอนต์",
       "ja": "クライアントエンジニア"
     },
     "date": "2023/08 - 2023/10",
-    "link": "https://climbers.show/"
-  },
-  {
-    "id": "axie-nft",
-    "flag": "🇯🇵",
-    "title": {
-      "en": "Axie-like NFT Game (Temp)",
-      "th": "เกม NFT สไตล์ Axie (ชื่อชั่วคราว)",
-      "ja": "AxieぽいNFTゲーム（仮）"
-    },
-    "subtitle": {
-      "en": "Turn-based RPG NFT Battler",
-      "th": "เกมสวมบทบาทสลับตาแนววางแผนและระบบบล็อคเชน",
-      "ja": "ターン制RPG・NFT対戦ゲーム"
-    },
-    "description": {
-      "en": "Designed an MVU architecture for a turn-based RPG containing Spine animations and BinanceChain Web3 integrations.",
-      "th": "ออกแบบโครงสร้างแบบ MVU สำหรับเกมแนว RPG วางแผนสลับตา (Turn-based) ประกอบด้วยแอนิเมชั่นจาก Spine และเชน BinanceChain",
-      "ja": "Spineアニメーション、ターン制バトル処理、およびBinanceChain決済を統合した、ターン制RPG型NFTゲームのMVU設計。"
-    },
-    "details": {
-      "en": "As Lead Client Engineer, Thanakit defined the MVU framework in Unity. Developed battle animation and turn calculation logic, integrated 2D Spine character meshes, and connected Web3 transaction wallets to the BinanceChain.",
-      "th": "ในฐานะหัวหน้าฝ่ายพัฒนาไคลเอนต์ คุณธนกิตออกแบบสถาปัตยกรรมแบบ MVU ใน Unity ทำระบบคำนวณและประมวลผลการต่อสู้แบบสลับตา ติดตั้งแอนิเมชันตัวละคร 2D Spine และเขียนเชื่อมต่อระบบกระเป๋าเงินคริปโตบนเชน BinanceChain",
-      "ja": "リードクライアントエンジニアとして、Unity上でのMVU設計を担当。ターン制バトルの処理ロジック構築、Spine-unityを用いた2Dアニメーション統合、パーティクルシステム演出、MetaMaskおよびBinanceChainを用いたスマートコントラクト決済連携を実行。"
-    },
-    "images": [
-      "/images/axie_nft_1.png",
-      "/images/dream_casino_2.png"
-    ],
-    "tags": ["Unity", "C#", "MVU Architecture", "Spine-unity", "DoTween", "VContainer", "BinanceChain"],
-    "role": {
-      "en": "Lead Client Engineer",
-      "th": "หัวหน้าวิศวกรฝ่ายไคลเอนต์",
-      "ja": "リードクライアントエンジニア"
-    },
-    "date": "2022/08 - 2023/04"
+    "link": "https://climbers.show/",
+    "isProfessional": true
   },
   {
     "id": "sinners-sanctuary",
@@ -204,13 +295,20 @@
       "/images/sinners_sanctuary_1.png",
       "/images/sinners_sanctuary_2.jpg"
     ],
-    "tags": ["Unity", "C#", "Game Direction", "Gameplay Loops", "Asset Pipeline"],
+    "tags": [
+      "Unity",
+      "C#",
+      "Game Direction",
+      "Gameplay Loops",
+      "Asset Pipeline"
+    ],
     "role": {
       "en": "Lead Engineer & Director",
       "th": "หัวหน้าวิศวกรและผู้กำกับโครงการ",
       "ja": "リードエンジニア＆ディレクター"
     },
-    "date": "2019/08 - 2020/03"
+    "date": "2019/08 - 2020/03",
+    "isProfessional": true
   },
   {
     "id": "watson-holmes",
@@ -238,13 +336,20 @@
     "images": [
       "/images/watson_holmes_1.png"
     ],
-    "tags": ["Unity", "Game Planning", "UI Design", "Scenario Support", "Testplay"],
+    "tags": [
+      "Unity",
+      "Game Planning",
+      "UI Design",
+      "Scenario Support",
+      "Testplay"
+    ],
     "role": {
       "en": "Game Planner",
       "th": "นักวางแผนระบบเกม",
       "ja": "プランナー"
     },
-    "date": "2019/06 - 2020/03"
+    "date": "2019/06 - 2020/03",
+    "isProfessional": true
   },
   {
     "id": "warlord-dark",
@@ -272,12 +377,19 @@
     "images": [
       "/images/warlord_dark_1.jpg"
     ],
-    "tags": ["Game Design", "Tabletop Board Game", "Versus Mode", "Balance Tuning", "Math Models"],
+    "tags": [
+      "Game Design",
+      "Tabletop Board Game",
+      "Versus Mode",
+      "Balance Tuning",
+      "Math Models"
+    ],
     "role": {
       "en": "Game Designer & Planner",
       "th": "นักออกแบบเกมและนักวางแผน",
       "ja": "プランナー"
     },
-    "date": "2019/06 - 2019/10"
+    "date": "2019/06 - 2019/10",
+    "isProfessional": true
   }
 ]

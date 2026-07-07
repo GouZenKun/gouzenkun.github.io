@@ -3,6 +3,7 @@
 import React from "react";
 import { Project } from "../../types/portfolio";
 import { useLanguage } from "@/context/LanguageContext";
+import { TRANSLATIONS } from "@/data/translations";
 import styles from "./PortfolioCard.module.css";
 
 interface PortfolioCardProps {
@@ -12,6 +13,7 @@ interface PortfolioCardProps {
 
 export default function PortfolioCard({ project, onClick }: PortfolioCardProps) {
   const { language } = useLanguage();
+  const t = TRANSLATIONS[language];
   const thumbnail = project.images[0] || "/images/placeholder.png";
 
   return (
@@ -25,6 +27,9 @@ export default function PortfolioCard({ project, onClick }: PortfolioCardProps) 
         }}
       >
         <div className={styles.imageOverlay}></div>
+        <span className={`${styles.badge} ${project.isProfessional ? styles.badgeProfessional : styles.badgePersonal}`}>
+          {project.isProfessional ? t.projProfessional : t.projPersonal}
+        </span>
       </div>
       
       <div className={styles.content}>

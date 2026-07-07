@@ -11,4 +11,5 @@ export interface Project {
   link?: string;
   github?: string;
   flag: string; // e.g. "🇯🇵" or "🇹🇭"
+  isProfessional: boolean;
 }

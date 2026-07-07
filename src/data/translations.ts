@@ -51,6 +51,9 @@ export const TRANSLATIONS = {
     modalRole: "Role",
     modalVisit: "Visit Live Project",
     modalSource: "Source Code",
+    modalCategory: "Project Category",
+    projProfessional: "★ Professional Work",
+    projPersonal: "Personal Project",
 
     // Skills Page
     navSkills: "Technical Skills",
@@ -112,6 +115,9 @@ export const TRANSLATIONS = {
     modalRole: "บทบาทหน้าที่",
     modalVisit: "เข้าชมเว็บไซต์จริง",
     modalSource: "ซอร์สโค้ด",
+    modalCategory: "ประเภทโปรเจกต์",
+    projProfessional: "★ โปรเจกบริษัท",
+    projPersonal: "โปรเจกต์ส่วนตัว",
 
     // Skills Page
     navSkills: "ทักษะทางเทคนิค",
@@ -173,6 +179,9 @@ export const TRANSLATIONS = {
     modalRole: "担当ロール",
     modalVisit: "ライブデモを開く",
     modalSource: "ソースコード",
+    modalCategory: "プロジェクト区分",
+    projProfessional: "★ 実務開発案件",
+    projPersonal: "個人開発・自主制作",
 
     // Skills Page
     navSkills: "技術スキル",

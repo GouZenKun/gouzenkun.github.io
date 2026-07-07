@@ -64,7 +64,7 @@ const ROLES_DATA: RoleData[] = [
       { name: "zod", years: 1, hasJobExperience: true },
       { name: "Next.js", years: 1, hasJobExperience: false }
     ],
-    projectIds: ["pachislo-metaverse", "climbers", "dream-casino"]
+    projectIds: ["pachislo-metaverse", "climbers", "dream-casino", "oblivion-maiden"]
   },
   {
     id: "data",
@@ -171,7 +171,7 @@ const ROLES_DATA: RoleData[] = [
       { name: "Unreal MaterialGraph", years: 1, hasJobExperience: false },
       { name: "Unreal Niagara Fluids", years: 1, hasJobExperience: false }
     ],
-    projectIds: ["paint-knockout", "dream-casino", "pachislo-metaverse", "climbers", "axie-nft", "sinners-sanctuary"]
+    projectIds: ["paint-knockout", "dream-casino", "pachislo-metaverse", "climbers", "axie-nft", "sinners-sanctuary", "oblivion-maiden"]
   },
   {
     id: "mobile",
