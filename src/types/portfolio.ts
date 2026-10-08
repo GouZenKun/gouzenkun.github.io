@@ -8,6 +8,12 @@ export interface Project {
   tags: string[];
   role: Record<string, string>;        // e.g. { en: "...", th: "...", ja: "..." }
   date: string;
+  status?: "released" | "cancelled";
+  platforms?: Array<{
+    platform: "steam" | "ios" | "android" | "web" | "boardgame";
+    url?: string;
+    label: string;
+  }>;
   link?: string;
   github?: string;
   flag: string; // e.g. "🇯🇵" or "🇹🇭"

@@ -5,6 +5,7 @@ import { Project } from "../../types/portfolio";
 import { useLanguage } from "@/context/LanguageContext";
 import { TRANSLATIONS } from "@/data/translations";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
+import PlatformIcon from "../PlatformIcon/PlatformIcon";
 import styles from "./ProjectModal.module.css";
 
 interface ProjectModalProps {
@@ -70,6 +71,14 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   {project.isProfessional ? t.projProfessional : t.projPersonal}
                 </span>
               </div>
+              {project.status && (
+                <div className={styles.metaItem}>
+                  <span className={styles.metaLabel}>{t.modalStatus}</span>
+                  <span className={`${styles.statusBadge} ${project.status === "released" ? styles.statusReleased : styles.statusCancelled}`}>
+                    {project.status === "released" ? t.statusReleased : t.statusCancelled}
+                  </span>
+                </div>
+              )}
             </div>
 
             <div className={styles.divider}></div>
@@ -91,7 +100,34 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
 
             <div className={styles.actionsSection}>
-              {project.link && (
+              {project.platforms?.map((platform) =>
+                platform.url ? (
+                  <a
+                    key={platform.platform}
+                    href={platform.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.platformLink}
+                    data-platform={platform.platform}
+                    aria-label={`View ${project.title[language] || "project"} on ${platform.label}`}
+                  >
+                    <PlatformIcon platform={platform.platform} className={styles.platformLinkIcon} />
+                    <span>{platform.label}</span>
+                    <span className={styles.externalMark} aria-hidden="true">↗</span>
+                  </a>
+                ) : (
+                  <span
+                    key={platform.platform}
+                    className={`${styles.platformLink} ${styles.platformLinkStatic}`}
+                    data-platform={platform.platform}
+                    aria-label={`${platform.label} platform`}
+                  >
+                    <PlatformIcon platform={platform.platform} className={styles.platformLinkIcon} />
+                    <span>{platform.label}</span>
+                  </span>
+                )
+              )}
+              {project.link && !project.platforms?.some((platform) => platform.url === project.link) ? (
                 <a
                   href={project.link}
                   target="_blank"
@@ -101,7 +137,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   {t.modalVisit}
                   <span className={styles.arrowIcon}>&rarr;</span>
                 </a>
-              )}
+              ) : null}
               {project.github && (
                 <a
                   href={project.github}

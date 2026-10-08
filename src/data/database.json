@@ -42,7 +42,15 @@
       "th": "นักพัฒนาอินดี้",
       "ja": "インディー開発者"
     },
-    "date": "2026/06 (Released)",
+    "date": "2026/06",
+    "status": "released",
+    "platforms": [
+      {
+        "platform": "steam",
+        "url": "https://store.steampowered.com/app/4521430/Oblivion_Maiden",
+        "label": "Steam"
+      }
+    ],
     "link": "https://store.steampowered.com/app/4521430/Oblivion_Maiden",
     "isProfessional": false
   },
@@ -89,6 +97,17 @@
       "ja": "フルスタックゲームエンジニア"
     },
     "date": "2024/07 - 2024/10",
+    "status": "released",
+    "platforms": [
+      {
+        "platform": "ios",
+        "label": "iOS"
+      },
+      {
+        "platform": "android",
+        "label": "Android"
+      }
+    ],
     "link": "https://paint-knockout.demo.example.com",
     "isProfessional": true
   },
@@ -134,6 +153,21 @@
       "ja": "リードクライアントエンジニア"
     },
     "date": "2024/01 - 2024/06",
+    "status": "cancelled",
+    "platforms": [
+      {
+        "platform": "ios",
+        "label": "iOS"
+      },
+      {
+        "platform": "android",
+        "label": "Android"
+      },
+      {
+        "platform": "web",
+        "label": "Web"
+      }
+    ],
     "isProfessional": true
   },
   {
@@ -178,6 +212,21 @@
       "ja": "リードクライアントエンジニア"
     },
     "date": "2022/08 - 2023/04",
+    "status": "cancelled",
+    "platforms": [
+      {
+        "platform": "ios",
+        "label": "iOS"
+      },
+      {
+        "platform": "android",
+        "label": "Android"
+      },
+      {
+        "platform": "web",
+        "label": "Web"
+      }
+    ],
     "isProfessional": true
   },
   {
@@ -221,6 +270,21 @@
       "ja": "リードクライアントエンジニア"
     },
     "date": "2023/05 - 2023/12",
+    "status": "cancelled",
+    "platforms": [
+      {
+        "platform": "ios",
+        "label": "iOS"
+      },
+      {
+        "platform": "android",
+        "label": "Android"
+      },
+      {
+        "platform": "web",
+        "label": "Web"
+      }
+    ],
     "isProfessional": true
   },
   {
@@ -265,6 +329,22 @@
       "ja": "クライアントエンジニア"
     },
     "date": "2023/08 - 2023/10",
+    "status": "released",
+    "platforms": [
+      {
+        "platform": "ios",
+        "label": "iOS"
+      },
+      {
+        "platform": "android",
+        "label": "Android"
+      },
+      {
+        "platform": "web",
+        "url": "https://climbers.show/",
+        "label": "Web"
+      }
+    ],
     "link": "https://climbers.show/",
     "isProfessional": true
   },
@@ -282,17 +362,16 @@
       "ja": "サスペンスADVゲーム開発指揮・企画"
     },
     "description": {
-      "en": "Directed a suspense adventure game from scratch, handling story pacing, gameplay loops, and vector movement systems.",
-      "th": "ผู้กำกับดูแลการสร้างเกมแนวระทึกขวัญไขคดีตั้งแต่ศูนย์ ออกแบบระบบเคลื่อนไหวและลูปการเล่นเกมหลัก",
-      "ja": "企画・立案から携わり、ゼロからサスペンスアドベンチャーゲームを立ち上げ。キャラクター操作、演出ロジック、およびクリエイティブ管理を実施。"
+      "en": "Directed a suspense adventure game from scratch, handling story pacing, gameplay loops, and vector movement systems before the project was canceled.",
+      "th": "กำกับการพัฒนาเกมผจญภัยระทึกขวัญตั้งแต่เริ่มต้น ทั้งการดำเนินเรื่อง ลูปการเล่น และระบบเคลื่อนไหว ก่อนที่โปรเจกต์จะถูกยกเลิก",
+      "ja": "サスペンスADVをゼロから立ち上げ、物語演出、ゲームプレイループ、移動システムを設計。発売前に開発中止となったプロジェクト。"
     },
     "details": {
-      "en": "At PUNICA CO., LTD., Thanakit served as Lead Engineer and Director, spearheading project design from the ground up. Directed visual pacing, asset creation pipelines, character control schemes, and layout layouts.",
-      "th": "ณ PUNICA CO., LTD. คุณธนกิตดูแลในบทบาทลีดเอนจินเนอร์และผู้อำนวยการสร้าง โดยเป็นผู้เริ่มสร้างโปรเจกต์นี้ทั้งหมด จัดการการทำงานร่วมกับทีมกราฟิก เขียนระบบการเคลื่อนไหว และกลไกของเกมแนวสำรวจและไขคดี",
-      "ja": "PUNICA CO., LTD.にてリードエンジニアおよびディレクターとして、新規のサスペンスADVプロジェクトをゼロから立ち上げ。ゲームシステム全体の企画、キャラクター操作・イベント演出演出プログラム、イラスト・グラフィックの進行管理を統括。"
+      "en": "At PUNICA CO., LTD., Thanakit served as Lead Engineer and Director, spearheading project design from the ground up. Directed visual pacing, asset pipelines, character controls, and layouts. The project was canceled before release.",
+      "th": "ณ PUNICA CO., LTD. คุณธนกิตทำหน้าที่ลีดเอนจินเนียร์และผู้กำกับโครงการ ดูแลการออกแบบตั้งแต่เริ่มต้น การดำเนินภาพ ระบบแอสเซ็ต การควบคุมตัวละคร และเลย์เอาต์ โดยโปรเจกต์ถูกยกเลิกก่อนวางจำหน่าย",
+      "ja": "PUNICA CO., LTD.にてリードエンジニア兼ディレクターとして、企画、演出、アセット制作フロー、キャラクター操作、画面設計を統括。本作は発売前に開発中止となった。"
     },
     "images": [
-      "/images/sinners_sanctuary_1.png",
       "/images/sinners_sanctuary_2.jpg"
     ],
     "tags": [
@@ -308,6 +387,13 @@
       "ja": "リードエンジニア＆ディレクター"
     },
     "date": "2019/08 - 2020/03",
+    "status": "cancelled",
+    "platforms": [
+      {
+        "platform": "steam",
+        "label": "Steam"
+      }
+    ],
     "isProfessional": true
   },
   {
@@ -324,14 +410,14 @@
       "ja": "女性向けパズル・アドベンチャーゲーム"
     },
     "description": {
-      "en": "Supported planning, UI wireframes, and test play for a detective puzzle game targeted at female audiences.",
-      "th": "ออกแบบระบบและวางแผนการเล่นเกมไขปริศนาแนวสืบสวนสำหรับกลุ่มเป้าหมายผู้หญิง, ทำต้นแบบอินเตอร์เฟส และร่วมทดสอบเกม",
-      "ja": "女性向けの探偵パズルゲームにおいて、企画、UIデザインの設計、およびテストプレイ・バランスチェックを担当。"
+      "en": "Supported planning, UI wireframes, and playtesting for a detective puzzle game that was canceled before release.",
+      "th": "ร่วมวางแผน ออกแบบ UI และทดสอบเกมไขปริศนาแนวสืบสวนสำหรับผู้เล่นหญิง ซึ่งถูกยกเลิกก่อนวางจำหน่าย",
+      "ja": "女性向け探偵パズルゲームの企画、UI設計、テストプレイを担当。発売前に開発中止となったプロジェクト。"
     },
     "details": {
-      "en": "Thanakit worked as a Planner at PUNICA CO., LTD., facilitating communications between original novel writers and developer programmers. Contributed to user interface layouts, scenario editing, and rigorous testplay checks.",
-      "th": "คุณธนกิตทำงานในบทบาทแพลนเนอร์ที่ PUNICA CO., LTD. เป็นผู้ประสานงานระหว่างนักเขียนนิยายต้นฉบับและทีมเขียนโปรแกรม ช่วยวางแผนโครงร่าง UI, ตรวจทานและแก้ไขบทเนื้อหาในเกม และประสานการทดสอบระบบก่อนส่งออก",
-      "ja": "PUNICA CO., LTD.にてプランナーとして従画。原作者と社内開発チーム間の技術仕様 of 調整役を務めるほか、UIワイヤーフレームの設計、シナリオ進行補助、およびプレイアビリティ向上のためのテストプレイを牽引。"
+      "en": "Thanakit worked as a Planner at PUNICA CO., LTD., coordinating original novel writers and developers while contributing UI layouts, scenario editing, and playtesting. The project was canceled before release.",
+      "th": "คุณธนกิตทำงานเป็นแพลนเนอร์ที่ PUNICA CO., LTD. ประสานงานระหว่างนักเขียนต้นฉบับและทีมพัฒนา พร้อมออกแบบ UI สนับสนุนบทเกม และดูแลการทดสอบ โดยโปรเจกต์ถูกยกเลิกก่อนวางจำหน่าย",
+      "ja": "PUNICA CO., LTD.にてプランナーとして、原作者と開発チームの調整、UI設計、シナリオ編集、テストプレイを担当。本作は発売前に開発中止となった。"
     },
     "images": [
       "/images/watson_holmes_1.png"
@@ -349,6 +435,17 @@
       "ja": "プランナー"
     },
     "date": "2019/06 - 2020/03",
+    "status": "cancelled",
+    "platforms": [
+      {
+        "platform": "ios",
+        "label": "iOS"
+      },
+      {
+        "platform": "android",
+        "label": "Android"
+      }
+    ],
     "isProfessional": true
   },
   {
@@ -365,14 +462,14 @@
       "ja": "協力・対戦型ボードゲーム設計"
     },
     "description": {
-      "en": "Designed competitive versus game mechanics and balanced play testing for a multiplayer tabletop experience.",
-      "th": "ออกแบบกลไกโหมดต่อสู้กระดานและการจำลองการ์ดปรับสมดุลความสามารถสำหรับเกมกระดานผู้เล่นหลายคน",
-      "ja": "複数人向けテーブルトップ体験における、対戦モードのゲームデザインおよび高度なバランス調整を担当。"
+      "en": "Designed competitive mechanics and balance testing for a multiplayer board game released as a commercial product.",
+      "th": "ออกแบบกลไกการแข่งขันและปรับสมดุลสำหรับบอร์ดเกมผู้เล่นหลายคนที่วางจำหน่ายเป็นผลิตภัณฑ์จริง",
+      "ja": "製品として発売された多人数向けボードゲームの対戦システム設計とバランス調整を担当。"
     },
     "details": {
-      "en": "Working as a Planner, Thanakit focused on designing the versus mode metrics, establishing math-based balancing models, and leading testplays to ensure competitive integrity and engagement.",
-      "th": "ในฐานะแพลนเนอร์ คุณธนกิตมุ่งเน้นการออกแบบกฎกติกาการแข่งขันสำหรับโหมด Versus, การวัดและเขียนตารางคำนวณสมดุลการ์ด และจัดตารางทดสอบการเล่นเพื่อหาช่องโหว่ความสมดุลของบอร์ดเกม",
-      "ja": "プランナーとして協力・対戦ボードゲーム開発に参画。特に対戦モードのシステム設計、勝率を均等化するためのパラメータ数値調整、およびテストプレイ時のフィードバック分析に焦点を当ててバランス調整を主導。"
+      "en": "Working as a Planner, Thanakit designed versus-mode metrics, established math-based balancing models, and led playtests for this commercially released physical board game.",
+      "th": "ในฐานะแพลนเนอร์ คุณธนกิตออกแบบกฎกติกาโหมด Versus สร้างโมเดลคำนวณสมดุล และนำการทดสอบการเล่นสำหรับบอร์ดเกมฉบับจริงที่วางจำหน่ายเป็นผลิตภัณฑ์",
+      "ja": "プランナーとして、製品化・発売された物理ボードゲームの対戦モード設計、数理モデルによるバランス調整、テストプレイを主導。"
     },
     "images": [
       "/images/warlord_dark_1.jpg"
@@ -390,6 +487,13 @@
       "ja": "プランナー"
     },
     "date": "2019/06 - 2019/10",
+    "status": "released",
+    "platforms": [
+      {
+        "platform": "boardgame",
+        "label": "Board game"
+      }
+    ],
     "isProfessional": true
   }
 ]

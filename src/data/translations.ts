@@ -52,6 +52,9 @@ export const TRANSLATIONS = {
     modalVisit: "Visit Live Project",
     modalSource: "Source Code",
     modalCategory: "Project Category",
+    modalStatus: "Release Status",
+    statusReleased: "Released",
+    statusCancelled: "Canceled",
     projProfessional: "★ Professional Work",
     projPersonal: "Personal Project",
 
@@ -116,6 +119,9 @@ export const TRANSLATIONS = {
     modalVisit: "เข้าชมเว็บไซต์จริง",
     modalSource: "ซอร์สโค้ด",
     modalCategory: "ประเภทโปรเจกต์",
+    modalStatus: "สถานะการเปิดตัว",
+    statusReleased: "เปิดตัวแล้ว",
+    statusCancelled: "ยกเลิกก่อนเปิดตัว",
     projProfessional: "★ โปรเจกบริษัท",
     projPersonal: "โปรเจกต์ส่วนตัว",
 
@@ -180,6 +186,9 @@ export const TRANSLATIONS = {
     modalVisit: "ライブデモを開く",
     modalSource: "ソースコード",
     modalCategory: "プロジェクト区分",
+    modalStatus: "リリース状況",
+    statusReleased: "発売済み",
+    statusCancelled: "開発中止・未発売",
     projProfessional: "★ 実務開発案件",
     projPersonal: "個人開発・自主制作",
 

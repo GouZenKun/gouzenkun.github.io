@@ -46,6 +46,10 @@
 }
 
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
   margin-bottom: 0.5rem;
 }
 
@@ -55,6 +59,29 @@
   letter-spacing: 0.05em;
   color: var(--text-muted);
   font-weight: 700;
+}
+
+.statusBadge {
+  flex-shrink: 0;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  font-size: 0.625rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statusReleased {
+  color: #a7f3d0;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.28);
+}
+
+.statusCancelled {
+  color: #fda4af;
+  background: rgba(244, 63, 94, 0.08);
+  border: 1px solid rgba(244, 63, 94, 0.24);
 }
 
 .title {
@@ -133,4 +160,59 @@
   border: 1px solid rgba(249, 115, 22, 0.4);
   color: #f97316;
   box-shadow: 0 0 10px rgba(249, 115, 22, 0.1);
+}
+
+.platformBadges {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 3;
+  display: flex;
+  gap: 0.45rem;
+}
+
+.platformBadge {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  color: #fff;
+  background: rgba(10, 15, 12, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  transition: var(--transition-smooth);
+}
+
+.platformBadge:hover,
+.platformBadge:focus-visible {
+  color: var(--platform-color, #66c0f4);
+  border-color: color-mix(in srgb, var(--platform-color, #66c0f4) 65%, transparent);
+  background: rgba(15, 28, 38, 0.94);
+  transform: translateY(-2px) scale(1.06);
+  outline: none;
+}
+
+.platformBadge[data-platform="steam"] { --platform-color: #66c0f4; }
+.platformBadge[data-platform="ios"] { --platform-color: #f5f5f7; }
+.platformBadge[data-platform="android"] { --platform-color: #3ddc84; }
+.platformBadge[data-platform="web"] { --platform-color: #60a5fa; }
+.platformBadge[data-platform="boardgame"] { --platform-color: #f59e0b; }
+
+.platformIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.platformBadgeStatic {
+  cursor: default;
+  color: var(--platform-color, #fff);
+}
+
+.platformBadgeStatic:hover {
+  color: var(--platform-color, #fff);
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(10, 15, 12, 0.82);
+  transform: none;
 }
