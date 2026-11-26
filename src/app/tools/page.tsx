@@ -43,7 +43,6 @@ export default function ToolsPage() {
       <main className={pageStyles.main}>
         <div className={styles.container}>
           <div className={styles.header}>
-            <span className={styles.subtitle}>{t.toolsSubtitle}</span>
             <h1 className={`${styles.title} text-gradient`}>{t.toolsTitle}</h1>
             <p className={styles.description}>{t.toolsDesc}</p>
           </div>

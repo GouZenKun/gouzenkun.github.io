@@ -70,8 +70,7 @@ export const TRANSLATIONS = {
 
     // Tools Page
     navTools: "Tools",
-    toolsSubtitle: "TOOLS",
-    toolsTitle: "Tools I've Built",
+    toolsTitle: "Tools",
     toolsOpen: "Open tool",
     toolsDesc: "Small apps I have developed myself. Open any of them and use it right in your browser."
   },
@@ -144,8 +143,7 @@ export const TRANSLATIONS = {
 
     // Tools Page
     navTools: "เครื่องมือ",
-    toolsSubtitle: "เครื่องมือ",
-    toolsTitle: "เครื่องมือที่ฉันพัฒนา",
+    toolsTitle: "เครื่องมือ",
     toolsOpen: "เปิดเครื่องมือ",
     toolsDesc: "แอปเล็ก ๆ ที่ฉันพัฒนาขึ้นเอง เปิดใช้งานได้ทันทีบนเบราว์เซอร์"
   },
@@ -218,8 +216,7 @@ export const TRANSLATIONS = {
 
     // Tools Page
     navTools: "ツール",
-    toolsSubtitle: "ツール",
-    toolsTitle: "自作ツール",
+    toolsTitle: "ツール",
     toolsOpen: "ツールを開く",
     toolsDesc: "自分で開発した小さなアプリです。ブラウザですぐに使えます。"
   }
