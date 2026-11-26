@@ -4,7 +4,7 @@ import PortfolioGrid from "@/components/PortfolioGrid/PortfolioGrid";
 import { PROJECTS } from "@/data/projects";
 import styles from "../page.module.css";
 
-export default function PortfolioPage() {
+export default function WorksPage() {
   return (
     <div className={styles.page}>
       <Navbar />

@@ -319,7 +319,7 @@ export default function SkillsPage() {
                 {connectedProjects.map((project) => (
                   <Link
                     key={project.id}
-                    href={`/portfolio#${project.id}`}
+                    href={`/works#${project.id}`}
                     className={styles.showcaseCard}
                   >
                     <div

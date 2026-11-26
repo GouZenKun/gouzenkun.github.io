@@ -31,7 +31,7 @@ export default function Home() {
               {t.heroDesc}
             </p>
             <div className={styles.heroActions}>
-              <Link href="/portfolio" className={styles.ctaPrimary}>
+              <Link href="/works" className={styles.ctaPrimary}>
                 {t.ctaExplore}
               </Link>
               <Link href="/about" className={styles.ctaSecondary}>

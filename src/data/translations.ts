@@ -3,7 +3,7 @@ export type TranslationKeys = keyof typeof TRANSLATIONS.en;
 export const TRANSLATIONS = {
   en: {
     // Navbar
-    navPortfolio: "Portfolio",
+    navWorks: "Works",
     navAbout: "About Me",
     navAvailable: "Available for Hire",
 
@@ -11,18 +11,18 @@ export const TRANSLATIONS = {
     heroTag: "Creative Engineer & Graphic Programmer",
     heroTitle: "Serene Algorithms Tracing Nature's Flow",
     heroDesc: "Move your mouse across the slate rock garden to disturb the water ripples and interact with the procedurally swimming Koi carps.",
-    ctaExplore: "Explore Showcases",
+    ctaExplore: "Explore Works",
     ctaContact: "Get in Touch",
 
-    // Portfolio Grid & Search
-    portfolioSubtitle: "PORTFOLIO",
-    portfolioTitle: "Featured Showcases",
-    portfolioDesc: "Explore our curated catalog of interactive experiments, raytracing simulators, and custom shaders.",
+    // Works Grid & Search
+    worksSubtitle: "WORKS",
+    worksTitle: "Past Works",
+    worksDesc: "Games, Web3 apps, and interactive experiments I have built, from professional roles to personal projects.",
     searchPlaceholder: "Search works by title, description, or tech stack...",
     filterLabel: "Filter by Stack:",
     showingCount: "Showing {count} of {total} works",
     clearAll: "Clear All Filters",
-    noResultsTitle: "No matching showcases found",
+    noResultsTitle: "No matching works found",
     noResultsDesc: "Try refining your search keyword or deselecting active stack filters.",
     resetFilters: "Reset Search & Filters",
 
@@ -70,16 +70,14 @@ export const TRANSLATIONS = {
 
     // Tools Page
     navTools: "Tools",
-    toolsSubtitle: "TOOLBOX",
-    toolsTitle: "Tools I Use",
-    toolsBuiltTitle: "Built by Me",
-    toolsStackTitle: "My Toolbox",
+    toolsSubtitle: "TOOLS",
+    toolsTitle: "Tools I've Built",
     toolsOpen: "Open tool",
-    toolsDesc: "The editors, engines, design apps, and infrastructure services I rely on day to day to ship games, web apps, and data pipelines."
+    toolsDesc: "Small apps I have developed myself. Open any of them and use it right in your browser."
   },
   th: {
     // Navbar
-    navPortfolio: "ผลงาน",
+    navWorks: "ผลงาน",
     navAbout: "เกี่ยวกับฉัน",
     navAvailable: "พร้อมรับงาน",
 
@@ -90,10 +88,10 @@ export const TRANSLATIONS = {
     ctaExplore: "สำรวจผลงาน",
     ctaContact: "ติดต่อฉัน",
 
-    // Portfolio Grid & Search
-    portfolioSubtitle: "แฟ้มสะสมผลงาน",
-    portfolioTitle: "ผลงานเด่น",
-    portfolioDesc: "สำรวจแคตตาล็อกที่รวบรวมการทดลองแบบโต้ตอบ เครื่องจำลองการติดตามแสง และเชดเดอร์แบบกำหนดเองของเรา",
+    // Works Grid & Search
+    worksSubtitle: "ผลงาน",
+    worksTitle: "ผลงานที่ผ่านมา",
+    worksDesc: "เกม แอป Web3 และงานทดลองเชิงโต้ตอบที่ฉันเคยสร้าง ทั้งจากงานบริษัทและโปรเจกต์ส่วนตัว",
     searchPlaceholder: "ค้นหาผลงานด้วยชื่อ รายละเอียด หรือเทคโนโลยี...",
     filterLabel: "กรองตามเทคโนโลยี:",
     showingCount: "แสดงผลงาน {count} จากทั้งหมด {total} ชิ้น",
@@ -146,16 +144,14 @@ export const TRANSLATIONS = {
 
     // Tools Page
     navTools: "เครื่องมือ",
-    toolsSubtitle: "กล่องเครื่องมือ",
-    toolsTitle: "เครื่องมือที่ใช้",
-    toolsBuiltTitle: "เครื่องมือที่ฉันสร้าง",
-    toolsStackTitle: "เครื่องมือที่ใช้ประจำ",
+    toolsSubtitle: "เครื่องมือ",
+    toolsTitle: "เครื่องมือที่ฉันพัฒนา",
     toolsOpen: "เปิดเครื่องมือ",
-    toolsDesc: "โปรแกรมแก้ไขโค้ด เอนจินเกม แอปออกแบบ และบริการโครงสร้างพื้นฐานที่ใช้ในการพัฒนาเกม เว็บแอป และท่อข้อมูลเป็นประจำ"
+    toolsDesc: "แอปเล็ก ๆ ที่ฉันพัฒนาขึ้นเอง เปิดใช้งานได้ทันทีบนเบราว์เซอร์"
   },
   ja: {
     // Navbar
-    navPortfolio: "ポートフォリオ",
+    navWorks: "制作実績",
     navAbout: "自己紹介",
     navAvailable: "お仕事の依頼受付中",
 
@@ -163,18 +159,18 @@ export const TRANSLATIONS = {
     heroTag: "クリエイティブエンジニア & グラフィックスプログラマー",
     heroTitle: "自然の流れを辿る静寂のアルゴリズム",
     heroDesc: "石庭の上にマウスを移動させて水の波紋を作り、数理モデルに基づいて泳ぐ鯉たちと触れ合ってみてください。",
-    ctaExplore: "ポートフォリオを見る",
+    ctaExplore: "制作実績を見る",
     ctaContact: "お問い合わせ",
 
-    // Portfolio Grid & Search
-    portfolioSubtitle: "ポートフォリオ",
-    portfolioTitle: "厳選されたプロジェクト",
-    portfolioDesc: "インタラクティブな実験、レイトレーシングシミュレーター、カスタムシェーダーのポートフォリオをご覧ください。",
+    // Works Grid & Search
+    worksSubtitle: "制作実績",
+    worksTitle: "これまでの制作実績",
+    worksDesc: "実務から個人開発まで、これまでに手がけたゲーム、Web3アプリ、インタラクティブ作品をご紹介します。",
     searchPlaceholder: "タイトル、説明、または技術スタックで検索...",
     filterLabel: "技術でフィルター:",
     showingCount: "全 {total} 件中 {count} 件を表示中",
     clearAll: "フィルターをクリア",
-    noResultsTitle: "一致するプロジェクトが見つかりません",
+    noResultsTitle: "一致する作品が見つかりません",
     noResultsDesc: "検索キーワードを変更するか、選択した技術スタックを解除してください。",
     resetFilters: "検索条件をリセット",
 
@@ -222,11 +218,9 @@ export const TRANSLATIONS = {
 
     // Tools Page
     navTools: "ツール",
-    toolsSubtitle: "ツールボックス",
-    toolsTitle: "使用ツール",
-    toolsBuiltTitle: "自作ツール",
-    toolsStackTitle: "愛用ツール",
+    toolsSubtitle: "ツール",
+    toolsTitle: "自作ツール",
     toolsOpen: "ツールを開く",
-    toolsDesc: "ゲーム、Webアプリ、データパイプラインの開発で日常的に使用しているエディタ、エンジン、デザインツール、インフラサービス。"
+    toolsDesc: "自分で開発した小さなアプリです。ブラウザですぐに使えます。"
   }
 };
