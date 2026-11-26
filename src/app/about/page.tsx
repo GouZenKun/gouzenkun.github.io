@@ -19,7 +19,6 @@ export default function AboutPage() {
           <div className={`${styles.aboutContainer} glassmorphism`}>
             {/* Left Section: Detailed Biography */}
             <div className={styles.aboutDetails}>
-              <span className={styles.heroTag}>{t.aboutTag}</span>
               <h2 className={`${styles.aboutTitle} text-gradient`}>{t.aboutTitle}</h2>
               
               <p>{t.aboutBio1}</p>

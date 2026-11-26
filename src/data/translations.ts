@@ -26,7 +26,6 @@ export const TRANSLATIONS = {
     resetFilters: "Reset Search & Filters",
 
     // About Page
-    aboutTag: "ABOUT THE ARCHITECT",
     aboutTitle: "Artistic Engineering",
     aboutBio1: "Hello! I am a Senior Frontend Engineer & Graphic Programmer dedicated to bridging the gap between rigorous software architecture and high-performance interactive graphics.",
     aboutBio2: "My professional path centers on building highly optimized, pixel-perfect user interfaces with Next.js, React, and custom HTML5/WebGL shaders. I specialize in creating fluid canvas simulations, high-telemetry dashboards, and secure financial products that perform smoothly at 60 FPS on any modern screen.",
@@ -97,7 +96,6 @@ export const TRANSLATIONS = {
     resetFilters: "รีเซ็ตการค้นหาและตัวกรอง",
 
     // About Page
-    aboutTag: "เกี่ยวกับผู้ออกแบบระบบ",
     aboutTitle: "วิศวกรรมเชิงศิลปะ",
     aboutBio1: "สวัสดี! ฉันเป็นวิศวกรฟรอนต์เอนด์อาวุโสและนักพัฒนาโปรแกรมกราฟิกที่มุ่งมั่นที่จะเชื่อมโยงสถาปัตยกรรมซอฟต์แวร์ที่เข้มงวดเข้ากับกราฟิกแบบโต้ตอบที่มีประสิทธิภาพสูง",
     aboutBio2: "เส้นทางวิชาชีพของฉันมุ่งเน้นไปที่การสร้างส่วนต่อประสานผู้ใช้ที่ทำงานได้อย่างมีประสิทธิภาพสูงสุดและสมบูรณ์แบบในระดับพิกเซลด้วย Next.js, React และเชดเดอร์ HTML5/WebGL ฉันเชี่ยวชาญในการสร้างการจำลองของไหลบนแคนวาส แดชบอร์ดที่มีข้อมูลการตรวจวัดสูง และผลิตภัณฑ์ทางการเงินที่ปลอดภัย ซึ่งแสดงผลได้อย่างลื่นไหลที่ 60 FPS บนทุกหน้าจอสมัยใหม่",
@@ -168,7 +166,6 @@ export const TRANSLATIONS = {
     resetFilters: "検索条件をリセット",
 
     // About Page
-    aboutTag: "設計者について",
     aboutTitle: "芸術的エンジニアリング",
     aboutBio1: "こんにちは！私は、堅牢なソフトウェアアーキテクチャと高性能なインタラクティブグラフィックスの架け橋となることを使命とするシニアフロントエンドエンジニア兼グラフィックスプログラマーです。",
     aboutBio2: "主に、Next.js、React、およびカスタムHTML5/WebGLシェーダーを使用した、高度に最適化され、ピクセルパーフェクトなUIの構築に取り組んでいます。キャンバス上の流体シミュレーション、高度なリアルタイム監視ダッシュボード、セキュアな金融システムなど、あらゆるデバイスで60 FPSの滑らかなレンダリング性能を提供します。",
