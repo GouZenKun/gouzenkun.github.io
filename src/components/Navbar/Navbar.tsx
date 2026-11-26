@@ -24,6 +24,9 @@ export default function Navbar() {
           <Link href="/skills" className={styles.navLink}>
             {TRANSLATIONS[language].navSkills}
           </Link>
+          <Link href="/tools" className={styles.navLink}>
+            {TRANSLATIONS[language].navTools}
+          </Link>
           <Link href="/about" className={styles.navLink}>
             {TRANSLATIONS[language].navAbout}
           </Link>

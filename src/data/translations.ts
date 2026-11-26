@@ -66,7 +66,16 @@ export const TRANSLATIONS = {
     roleExperience: "Experience",
     roleCoreSkills: "Core Technologies & Libraries",
     roleProjectsTitle: "Showcases Built Using These Skills",
-    skillsLegend: "★ indicates professional project / work experience."
+    skillsLegend: "★ indicates professional project / work experience.",
+
+    // Tools Page
+    navTools: "Tools",
+    toolsSubtitle: "TOOLBOX",
+    toolsTitle: "Tools I Use",
+    toolsBuiltTitle: "Built by Me",
+    toolsStackTitle: "My Toolbox",
+    toolsOpen: "Open tool",
+    toolsDesc: "The editors, engines, design apps, and infrastructure services I rely on day to day to ship games, web apps, and data pipelines."
   },
   th: {
     // Navbar
@@ -133,7 +142,16 @@ export const TRANSLATIONS = {
     roleExperience: "ประสบการณ์",
     roleCoreSkills: "เทคโนโลยี & ไลบรารีหลัก",
     roleProjectsTitle: "โครงการที่สร้างโดยใช้ทักษะเหล่านี้",
-    skillsLegend: "★ ระบุถึงทักษะที่มีประสบการณ์ทำงานจริงในโปรเจกต์"
+    skillsLegend: "★ ระบุถึงทักษะที่มีประสบการณ์ทำงานจริงในโปรเจกต์",
+
+    // Tools Page
+    navTools: "เครื่องมือ",
+    toolsSubtitle: "กล่องเครื่องมือ",
+    toolsTitle: "เครื่องมือที่ใช้",
+    toolsBuiltTitle: "เครื่องมือที่ฉันสร้าง",
+    toolsStackTitle: "เครื่องมือที่ใช้ประจำ",
+    toolsOpen: "เปิดเครื่องมือ",
+    toolsDesc: "โปรแกรมแก้ไขโค้ด เอนจินเกม แอปออกแบบ และบริการโครงสร้างพื้นฐานที่ใช้ในการพัฒนาเกม เว็บแอป และท่อข้อมูลเป็นประจำ"
   },
   ja: {
     // Navbar
@@ -200,6 +218,15 @@ export const TRANSLATIONS = {
     roleExperience: "実務経験",
     roleCoreSkills: "主要テクノロジー＆ライブラリ",
     roleProjectsTitle: "このスキルで構築されたプロジェクト",
-    skillsLegend: "★は実際のプロジェクトでの開発実務経験を示します。"
+    skillsLegend: "★は実際のプロジェクトでの開発実務経験を示します。",
+
+    // Tools Page
+    navTools: "ツール",
+    toolsSubtitle: "ツールボックス",
+    toolsTitle: "使用ツール",
+    toolsBuiltTitle: "自作ツール",
+    toolsStackTitle: "愛用ツール",
+    toolsOpen: "ツールを開く",
+    toolsDesc: "ゲーム、Webアプリ、データパイプラインの開発で日常的に使用しているエディタ、エンジン、デザインツール、インフラサービス。"
   }
 };
