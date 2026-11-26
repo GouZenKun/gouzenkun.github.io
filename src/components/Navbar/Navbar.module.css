@@ -155,8 +155,28 @@
     top: 1rem;
     padding: 0.75rem 1rem;
   }
+  .container {
+    flex-wrap: wrap;
+    row-gap: 0.6rem;
+  }
+  /* Links move to their own full-width row under the logo + language picker */
   .nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.9rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-top: 0.6rem;
+    border-top: 1px solid var(--border-glass);
+  }
+  .nav::-webkit-scrollbar {
     display: none;
+  }
+  .navLink {
+    font-size: 0.85rem;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
   .badgeGroup {
     display: none; /* Hide badge on mobile to leave space for language selector */
