@@ -304,13 +304,13 @@ const tm=()=>new Date().toTimeString().slice(0,8);
 function row(a){const tr=document.createElement('tr');tr.innerHTML=a.map(()=>'<td></td>').join('');a.forEach((v,i)=>tr.children[i].textContent=v);return tr}
 function quietAsk(){if(!Q.on)return;Q.n++;newQ();const L=$('qLog');$('qNow')&&$('qNow').parentNode.remove();if(L.firstChild&&L.firstChild.dataset.p)L.firstChild.remove();const pr=row([tm(),Q.n,'…','pending']);pr.dataset.p=1;L.prepend(pr);const d=Math.max(...events(q.item,q.root,S.style[S.mode],q.dir).map(e=>e[1]));Q.t=setTimeout(quietReveal,(+$('qA').value+d+1)*1000)}
 /* Reveal order: log the answer → speak it and wait until the voice ends → replay it (not for intervals)
-   and wait until it ends → next question straight away. */
+   and wait until it ends → next question straight away. Intervals (Set B) and progressions (Set E) skip the replay. */
 async function quietReveal(){if(!q)return;const g=Q.g,cur=q;q.solved=true;mark(q.item,q.root);
  const live=()=>Q.on&&g===Q.g&&q===cur,wait=ms=>new Promise(r=>{Q.t=setTimeout(r,ms)});
  const L=$('qLog');if(L.firstChild&&L.firstChild.dataset.p)L.firstChild.remove();
  L.prepend(row([tm(),Q.n,code(q.item)+'  '+(S.mode==='pr'?keyName(q.item,q.root)+': '+chordNames(q.item,q.root):(S.mode==='iv'&&(q.dir||S.style.iv)==='Descending'?[...q.item.notes].reverse():q.item.notes).map(x=>nn(q.root+x)).join(S.mode==='iv'?((q.dir||S.style.iv)==='Descending'?' ↓ ':' ↑ '):'-')),q.res==='right'?'OK':q.res==='missed'?'Check':'Done']));while(L.children.length>18)L.lastChild.remove();
  await sayName(S.mode==='pp'?nn(q.root+q.item.notes[0]):S.mode==='pr'?q.item.say:spoken(q.item.name));if(!live())return;
- if(S.mode!=='iv'){const E=events(q.item,q.root,S.style[S.mode],q.dir);sound(E,true);await wait(Math.max(...E.map(e=>e[1]+Math.min(e[2],1.5)))*1000+300);if(!live())return}
+ if(S.mode!=='iv'&&S.mode!=='pr'){const E=events(q.item,q.root,S.style[S.mode],q.dir);sound(E,true);await wait(Math.max(...E.map(e=>e[1]+Math.min(e[2],1.5)))*1000+300);if(!live())return}
  quietAsk()}
 function quietStop(){Q.on=false;Q.g++;clearTimeout(Q.t);try{speechSynthesis.cancel()}catch(e){}timers.forEach(clearTimeout);$('qGo').textContent='Start';const L=$('qLog');if(L.firstChild&&L.firstChild.dataset.p)L.firstChild.remove();mkSync()}
 /* Media keys: the keyboard's Play/Pause key reaches this page through the Media Session API,
