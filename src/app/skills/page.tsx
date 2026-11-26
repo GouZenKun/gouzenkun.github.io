@@ -227,7 +227,6 @@ export default function SkillsPage() {
         <div className={styles.container}>
           {/* Header */}
           <div className={styles.header}>
-            <span className={styles.subtitle}>{t.skillsSubtitle}</span>
             <h1 className={`${styles.title} text-gradient`}>{t.skillsTitle}</h1>
             <p className={styles.description}>{t.skillsDesc}</p>
           </div>

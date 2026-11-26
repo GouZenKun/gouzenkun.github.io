@@ -59,7 +59,6 @@ export const TRANSLATIONS = {
 
     // Skills Page
     navSkills: "Technical Skills",
-    skillsSubtitle: "SKILLSETS",
     skillsTitle: "Technical Skills",
     skillsDesc: "A deep dive into core competencies, design architectures, and engineering frameworks refined across professional roles in Japan and Thailand.",
     roleExperience: "Experience",
@@ -131,7 +130,6 @@ export const TRANSLATIONS = {
 
     // Skills Page
     navSkills: "ทักษะทางเทคนิค",
-    skillsSubtitle: "ชุดทักษะความสามารถ",
     skillsTitle: "ทักษะทางเทคนิค",
     skillsDesc: "เจาะลึกทักษะหลัก สถาปัตยกรรมซอฟต์แวร์ และเฟรมเวิร์กวิศวกรรมที่ได้รับการพัฒนาผ่านการทำงานจริงในญี่ปุ่นและไทย",
     roleExperience: "ประสบการณ์",
@@ -203,7 +201,6 @@ export const TRANSLATIONS = {
 
     // Skills Page
     navSkills: "技術スキル",
-    skillsSubtitle: "スキルセット",
     skillsTitle: "技術スキル",
     skillsDesc: "日本とタイでの開発プロジェクトを通じて磨かれた、コアコンピテンシー、システム設計、およびエンジニアリングフレームワークの詳細。",
     roleExperience: "実務経験",
