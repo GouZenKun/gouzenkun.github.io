@@ -309,7 +309,8 @@ async function quietReveal(){if(!q)return;const g=Q.g,cur=q;q.solved=true;mark(q
  const live=()=>Q.on&&g===Q.g&&q===cur;
  const L=$('qLog');if(L.firstChild&&L.firstChild.dataset.p)L.firstChild.remove();
  L.prepend(row([tm(),Q.n,code(q.item)+'  '+(S.mode==='pr'?keyName(q.item,q.root)+': '+chordNames(q.item,q.root):(S.mode==='iv'&&(q.dir||S.style.iv)==='Descending'?[...q.item.notes].reverse():q.item.notes).map(x=>nn(q.root+x)).join(S.mode==='iv'?((q.dir||S.style.iv)==='Descending'?' ↓ ':' ↑ '):'-')),q.res==='right'?'OK':q.res==='missed'?'Check':'Done']));while(L.children.length>18)L.lastChild.remove();
- await sayName(S.mode==='pp'?nn(q.root+q.item.notes[0]):S.mode==='pr'?q.item.say:S.mode==='sc'?pcSay(q.root)+' '+spoken(q.item.name):spoken(q.item.name));if(!live())return;
+ /* Chords and scales: "E flat minor", "F major". Progressions: "D major, one, five, six, four". */
+ await sayName(S.mode==='pp'?nn(q.root+q.item.notes[0]):S.mode==='pr'?pcSay(q.root)+(q.item.minor?' minor, ':' major, ')+q.item.say.replace(/^minor: /,''):S.mode==='sc'||S.mode==='ch'?pcSay(q.root)+' '+spoken(q.item.name):spoken(q.item.name));if(!live())return;
  quietAsk()}
 function quietStop(){Q.on=false;Q.g++;clearTimeout(Q.t);try{speechSynthesis.cancel()}catch(e){}timers.forEach(clearTimeout);$('qGo').textContent='Start';const L=$('qLog');if(L.firstChild&&L.firstChild.dataset.p)L.firstChild.remove();mkSync()}
 /* Media keys: the keyboard's Play/Pause key reaches this page through the Media Session API,
