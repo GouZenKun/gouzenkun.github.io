@@ -119,7 +119,6 @@ body.stealth{background:light-dark(#fff,#1e1e1e)}body.stealth #quiet{display:blo
     <label id="qKeyL">Root <select id="qKey"><option value="">Random</option></select></label>
     <label id="qDirL">Direction <select id="qDir"><option>Ascending</option><option>Descending</option><option>Random</option></select></label>
     <label>Hold <select id="qA"><option selected>3</option><option>5</option><option>8</option><option>12</option></select></label>
-    <label>Interval <select id="qB"><option selected>4</option><option>8</option><option>15</option><option>30</option><option>60</option></select></label>
     <label><input type="checkbox" id="qSay" checked> Voice</label>
     <label>Vol <input type="range" id="qVol" min="0" max="100" value="45" aria-label="Volume"></label>
     <button id="qPr" aria-pressed="false">Practice</button>
@@ -305,14 +304,14 @@ const tm=()=>new Date().toTimeString().slice(0,8);
 function row(a){const tr=document.createElement('tr');tr.innerHTML=a.map(()=>'<td></td>').join('');a.forEach((v,i)=>tr.children[i].textContent=v);return tr}
 function quietAsk(){if(!Q.on)return;Q.n++;newQ();const L=$('qLog');$('qNow')&&$('qNow').parentNode.remove();if(L.firstChild&&L.firstChild.dataset.p)L.firstChild.remove();const pr=row([tm(),Q.n,'…','pending']);pr.dataset.p=1;L.prepend(pr);const d=Math.max(...events(q.item,q.root,S.style[S.mode],q.dir).map(e=>e[1]));Q.t=setTimeout(quietReveal,(+$('qA').value+d+1)*1000)}
 /* Reveal order: log the answer → speak it and wait until the voice ends → replay it (not for intervals)
-   and wait until it ends → only then count the Interval gap before the next question. */
+   and wait until it ends → next question straight away. */
 async function quietReveal(){if(!q)return;const g=Q.g,cur=q;q.solved=true;mark(q.item,q.root);
  const live=()=>Q.on&&g===Q.g&&q===cur,wait=ms=>new Promise(r=>{Q.t=setTimeout(r,ms)});
  const L=$('qLog');if(L.firstChild&&L.firstChild.dataset.p)L.firstChild.remove();
  L.prepend(row([tm(),Q.n,code(q.item)+'  '+(S.mode==='pr'?keyName(q.item,q.root)+': '+chordNames(q.item,q.root):(S.mode==='iv'&&(q.dir||S.style.iv)==='Descending'?[...q.item.notes].reverse():q.item.notes).map(x=>nn(q.root+x)).join(S.mode==='iv'?((q.dir||S.style.iv)==='Descending'?' ↓ ':' ↑ '):'-')),q.res==='right'?'OK':q.res==='missed'?'Check':'Done']));while(L.children.length>18)L.lastChild.remove();
  await sayName(S.mode==='pp'?nn(q.root+q.item.notes[0]):S.mode==='pr'?q.item.say:spoken(q.item.name));if(!live())return;
  if(S.mode!=='iv'){const E=events(q.item,q.root,S.style[S.mode],q.dir);sound(E,true);await wait(Math.max(...E.map(e=>e[1]+Math.min(e[2],1.5)))*1000+300);if(!live())return}
- Q.t=setTimeout(quietAsk,+$('qB').value*1000)}
+ quietAsk()}
 function quietStop(){Q.on=false;Q.g++;clearTimeout(Q.t);try{speechSynthesis.cancel()}catch(e){}timers.forEach(clearTimeout);$('qGo').textContent='Start';const L=$('qLog');if(L.firstChild&&L.firstChild.dataset.p)L.firstChild.remove();mkSync()}
 /* Media keys: the keyboard's Play/Pause key reaches this page through the Media Session API,
    even when the tab or window is not focused. Chrome/Edge only route it to a page that has a
@@ -326,7 +325,6 @@ try{if('mediaSession' in navigator){navigator.mediaSession.metadata=new MediaMet
  const mk=on=>{if(document.body.classList.contains('stealth')&&Q.on!==on)$('qGo').click()};
  navigator.mediaSession.setActionHandler('play',()=>mk(true));navigator.mediaSession.setActionHandler('pause',()=>mk(false));
  try{navigator.mediaSession.setActionHandler('stop',()=>mk(false))}catch(e){}}}catch(e){}
-const setGap=()=>{$('qB').value='4'};
 const keyUI=()=>{$('qKeyL').hidden=$('qDirL').hidden=$('qPr').hidden=S.mode!=='iv';if(['Ascending','Descending','Random'].includes(S.style.iv))$('qDir').value=S.style.iv;else{S.style.iv='Ascending';$('qDir').value='Ascending'}if(S.mode!=='iv'){$('qPrac').hidden=true;$('qPr').setAttribute('aria-pressed','false')}$('qKey').value=S.root||''};
 {let o='';for(let m=36;m<=84;m++)o+=`<option value="${m}">${nn(m)}</option>`;$('qKey').innerHTML+=o}
 $('qDir').addEventListener('change',e=>{S.style.iv=e.target.value;save();renderSet()});
@@ -335,9 +333,9 @@ $('qPrac').innerHTML=MODES.iv.items.map(i=>`<button data-id="${i.id}" title="${i
 $('qPr').addEventListener('click',()=>{const on=$('qPrac').hidden;$('qPrac').hidden=!on;$('qPr').setAttribute('aria-pressed',on)});
 $('qPrac').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const it=MODES.iv.items.find(i=>i.id===b.dataset.id),root=S.root?+S.root:60;
  const st=S.style.iv==='Random'?(Math.random()<.5?'Ascending':'Descending'):S.style.iv==='Mixed'?'Ascending':S.style.iv;const E=events(it,root,st,st);sound(E,false);try{speechSynthesis.cancel()}catch(e){}clearTimeout(Q.sp);Q.sp=setTimeout(()=>sayName(spoken(it.name)),(Math.max(...E.map(e=>e[1]))+.9)*1000)});
-const goQ=()=>{setGap();keyUI();document.body.classList.add('stealth');$('qMode').innerHTML=Object.entries(MODES).map(([k,m])=>`<option value="${k}"${k===S.mode?' selected':''}>Set ${{pp:'A',iv:'B',ch:'C',sc:'D',pr:'E'}[k]}</option>`).join('');qKeys()};$('goQuiet').addEventListener('click',goQ);
+const goQ=()=>{keyUI();document.body.classList.add('stealth');$('qMode').innerHTML=Object.entries(MODES).map(([k,m])=>`<option value="${k}"${k===S.mode?' selected':''}>Set ${{pp:'A',iv:'B',ch:'C',sc:'D',pr:'E'}[k]}</option>`).join('');qKeys()};$('goQuiet').addEventListener('click',goQ);
 $('qExit').addEventListener('click',()=>{quietStop();document.body.classList.remove('stealth');q=null;clearMarks();$('next').hidden=true;renderAll()});
-$('qMode').addEventListener('change',e=>{const on=Q.on;quietStop();setMode(e.target.value);setGap();keyUI();qKeys();if(on)$('qGo').click()});
+$('qMode').addEventListener('change',e=>{const on=Q.on;quietStop();setMode(e.target.value);keyUI();qKeys();if(on)$('qGo').click()});
 $('qGo').addEventListener('click',()=>{if(Q.on){quietStop();return}audio();Q.on=true;$('qGo').textContent='Pause';mkSync();quietAsk()});
 $('qVol').addEventListener('input',e=>{audio();master.gain.value=+e.target.value/100*1.6});
 $('play').addEventListener('click',()=>!q?newQ():play());
