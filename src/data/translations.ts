@@ -15,8 +15,7 @@ export const TRANSLATIONS = {
     ctaContact: "Get in Touch",
 
     // Works Grid & Search
-    worksSubtitle: "WORKS",
-    worksTitle: "Past Works",
+    worksTitle: "Works",
     worksDesc: "Games, Web3 apps, and interactive experiments I have built, from professional roles to personal projects.",
     searchPlaceholder: "Search works by title, description, or tech stack...",
     filterLabel: "Filter by Stack:",
@@ -88,8 +87,7 @@ export const TRANSLATIONS = {
     ctaContact: "ติดต่อฉัน",
 
     // Works Grid & Search
-    worksSubtitle: "ผลงาน",
-    worksTitle: "ผลงานที่ผ่านมา",
+    worksTitle: "ผลงาน",
     worksDesc: "เกม แอป Web3 และงานทดลองเชิงโต้ตอบที่ฉันเคยสร้าง ทั้งจากงานบริษัทและโปรเจกต์ส่วนตัว",
     searchPlaceholder: "ค้นหาผลงานด้วยชื่อ รายละเอียด หรือเทคโนโลยี...",
     filterLabel: "กรองตามเทคโนโลยี:",
@@ -161,8 +159,7 @@ export const TRANSLATIONS = {
     ctaContact: "お問い合わせ",
 
     // Works Grid & Search
-    worksSubtitle: "制作実績",
-    worksTitle: "これまでの制作実績",
+    worksTitle: "制作実績",
     worksDesc: "実務から個人開発まで、これまでに手がけたゲーム、Web3アプリ、インタラクティブ作品をご紹介します。",
     searchPlaceholder: "タイトル、説明、または技術スタックで検索...",
     filterLabel: "技術でフィルター:",

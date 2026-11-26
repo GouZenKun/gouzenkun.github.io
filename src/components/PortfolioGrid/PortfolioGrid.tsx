@@ -90,7 +90,6 @@ export default function PortfolioGrid({ projects }: PortfolioGridProps) {
     <section id="works" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.headerArea}>
-          <span className={styles.sectionSubtitle}>{t.worksSubtitle}</span>
           <h2 className={`${styles.sectionTitle} text-gradient`}>{t.worksTitle}</h2>
           <p className={styles.sectionDesc}>{t.worksDesc}</p>
         </div>
