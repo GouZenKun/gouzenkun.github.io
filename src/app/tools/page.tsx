@@ -23,9 +23,9 @@ const BUILT_TOOLS: BuiltTool[] = [
     id: "ear-trainer",
     name: { en: "Ear Trainer", th: "ฝึกโสตประสาท (Ear Trainer)", ja: "イヤートレーナー" },
     description: {
-      en: "Train your ear on intervals, chords, scales and perfect pitch with a playable 88-key piano, per-item accuracy stats, and a hands-free practice log with spoken answers.",
-      th: "ฝึกฟังขั้นคู่เสียง คอร์ด สเกล และ Perfect Pitch ด้วยเปียโน 88 คีย์ที่เล่นได้จริง มีสถิติความแม่นยำรายข้อ และโหมดฝึกแบบไม่ต้องใช้มือพร้อมเสียงบอกคำตอบ",
-      ja: "演奏可能な88鍵ピアノで音程・コード・スケール・絶対音感を鍛えるツール。項目別の正答率と、音声で答えを読み上げるハンズフリー練習ログ付き。",
+      en: "Train your ear on intervals, chords, chord progressions, scales and perfect pitch with a playable 88-key piano, per-item accuracy stats, and a hands-free practice log with spoken answers.",
+      th: "ฝึกฟังขั้นคู่เสียง คอร์ด ทางเดินคอร์ด สเกล และ Perfect Pitch ด้วยเปียโน 88 คีย์ที่เล่นได้จริง มีสถิติความแม่นยำรายข้อ และโหมดฝึกแบบไม่ต้องใช้มือพร้อมเสียงบอกคำตอบ",
+      ja: "演奏可能な88鍵ピアノで音程・コード・コード進行・スケール・絶対音感を鍛えるツール。項目別の正答率と、音声で答えを読み上げるハンズフリー練習ログ付き。",
     },
     tags: ["Web Audio API", "Speech Synthesis", "Vanilla JS"],
     href: "/apps/ear-trainer.html",
