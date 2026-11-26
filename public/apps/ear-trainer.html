@@ -123,7 +123,7 @@ body.stealth{background:light-dark(#fff,#1e1e1e)}body.stealth #quiet{display:blo
     <label><input type="checkbox" id="qSay" checked> Voice</label>
     <label>Vol <input type="range" id="qVol" min="0" max="100" value="45" aria-label="Volume"></label>
     <button id="qPr" aria-pressed="false">Practice</button>
-    <button id="qGo">Start</button>
+    <button id="qGo" title="Start / pause (Space)">Start</button>
     <button id="qExit">Full view</button>
   </div>
   <div class="ql" id="qPrac" hidden></div>
@@ -262,7 +262,7 @@ const SPK={'2nd':'second','3rd':'third','4th':'fourth','5th':'fifth','6th':'sixt
 const spoken=n=>({'Tritone':'tritone','Octave':'octave','Sus2':'suspended second','Sus4':'suspended fourth','Half-dim 7':'half diminished seventh','Dominant 7':'dominant seventh','Major 7':'major seventh','Minor 7':'minor seventh','Diminished 7':'diminished seventh'}[n]||n.replace(/\b(2nd|3rd|4th|5th|6th|7th)\b/,m=>SPK[m])).toLowerCase();
 const sayName=t=>{try{if(!$('qSay').checked||!window.speechSynthesis)return;const u=new SpeechSynthesisUtterance(t.replace(/([A-G])([♯♭]?)(-?\d)/g,'$1 $2 $3').replace(/♯/g,'sharp').replace(/♭/g,'flat').replace(/\s+/g,' '));pickEN();u.lang=EV?EV.lang:'en-US';if(EV)u.voice=EV;u.rate=.85;u.volume=+$('qVol').value/100;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}};
 const code=it=>S.mode==='iv'?it.sub:it.name;
-function qKeys(){$('qKeys').textContent='Keys: '+pool().slice(0,10).map((it,i)=>((i+1)%10)+'='+code(it)).join('  ')}
+function qKeys(){$('qKeys').textContent='Space = start/pause  ·  Keys: '+pool().slice(0,10).map((it,i)=>((i+1)%10)+'='+code(it)).join('  ')}
 const tm=()=>new Date().toTimeString().slice(0,8);
 function row(a){const tr=document.createElement('tr');tr.innerHTML=a.map(()=>'<td></td>').join('');a.forEach((v,i)=>tr.children[i].textContent=v);return tr}
 function quietAsk(){if(!Q.on)return;Q.n++;newQ();const L=$('qLog');$('qNow')&&$('qNow').parentNode.remove();if(L.firstChild&&L.firstChild.dataset.p)L.firstChild.remove();const pr=row([tm(),Q.n,'…','pending']);pr.dataset.p=1;L.prepend(pr);const d=Math.max(...events(q.item,q.root,S.style[S.mode],q.dir).map(e=>e[1]));Q.t=setTimeout(quietReveal,(+$('qA').value+d+1)*1000)}
@@ -297,7 +297,7 @@ $('pool').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)
 $('styles').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;S.style[S.mode]=b.dataset.s;if(q&&!q.solved)q.dir=b.dataset.s==='Mixed'?q.dir:null;save();renderSet()});
 $('reset').addEventListener('click',()=>{S.stats[S.mode]={};save();renderStats()});
 document.addEventListener('keydown',e=>{if(e.target.closest('input,textarea')||e.metaKey||e.ctrlKey)return;
- if(e.code==='Space'){e.preventDefault();play()}
+ if(e.code==='Space'){e.preventDefault();if(e.repeat)return;if(document.body.classList.contains('stealth'))$('qGo').click();else play()}
  else if(e.key==='Enter'){if(!q||q.solved){e.preventDefault();newQ()}}
  else if(/^[0-9]$/.test(e.key)){const p=pool(),i=e.key==='0'?9:+e.key-1;if(p[i])answer(p[i].id)}});
 save();buildKb();renderAll();goQ();try{pickEN();speechSynthesis.onvoiceschanged=()=>{EV=null;pickEN()}}catch(e){}
