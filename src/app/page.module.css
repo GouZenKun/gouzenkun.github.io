@@ -274,6 +274,11 @@
 
 /* Responsive UI */
 @media (max-width: 768px) {
+  /* Room for the taller two-row mobile navbar */
+  .main {
+    padding-top: 6rem;
+  }
+
   .heroTitle {
     font-size: 2.75rem;
   }
