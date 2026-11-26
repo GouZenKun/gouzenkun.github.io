@@ -289,22 +289,31 @@ function renderAll(){renderTabs();renderAnswers();renderSet();renderStats();rend
 function setMode(k){S.mode=k;q=null;clearMarks();$('next').hidden=true;save();msg('Press play for a '+M().what,'Pick what you heard from the options below');renderAll()}
 $('tabs').addEventListener('click',e=>{const b=e.target.closest('button');b&&setMode(b.dataset.k)});
 /* quiet mode */
-const Q={on:false,t:0,n:0};
+const Q={on:false,t:0,n:0,g:0}; /* g: run id, bumped on every stop so stale reveal steps bail out */
 let EV=null;function pickEN(){try{if(EV)return;const vs=speechSynthesis.getVoices().filter(v=>/^en/i.test(v.lang));const pref=[/Google US English/i,/Samantha/i,/Microsoft (Aria|Jenny|Zira|Guy|David)/i,/Alex/i,/Google UK English/i,/Daniel/i];for(const re of pref){EV=vs.find(v=>re.test(v.name));if(EV)return}EV=vs.find(v=>/^en[-_]US/i.test(v.lang))||vs[0]||null}catch(e){}}
 const SPK={'2nd':'second','3rd':'third','4th':'fourth','5th':'fifth','6th':'sixth','7th':'seventh'};
 const spoken=n=>({'Tritone':'tritone','Octave':'octave','Sus2':'suspended second','Sus4':'suspended fourth','Half-dim 7':'half diminished seventh','Dominant 7':'dominant seventh','Major 7':'major seventh','Minor 7':'minor seventh','Diminished 7':'diminished seventh'}[n]||n.replace(/\b(2nd|3rd|4th|5th|6th|7th)\b/,m=>SPK[m])).toLowerCase();
-const sayName=t=>{try{if(!$('qSay').checked||!window.speechSynthesis)return;const u=new SpeechSynthesisUtterance(t.replace(/([A-G])([♯♭]?)(-?\d)/g,'$1 $2 $3').replace(/♯/g,'sharp').replace(/♭/g,'flat').replace(/\s+/g,' '));pickEN();u.lang=EV?EV.lang:'en-US';if(EV)u.voice=EV;u.rate=.85;u.volume=+$('qVol').value/100;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}};
+/* Speaks the answer; the promise settles when the voice has finished (or was cancelled / is off).
+   A fallback timer covers browsers that never fire onend (e.g. background tabs in Chrome). */
+const sayName=t=>new Promise(res=>{try{if(!$('qSay').checked||!window.speechSynthesis)return res();
+ const u=new SpeechSynthesisUtterance(t.replace(/([A-G])([♯♭]?)(-?\d)/g,'$1 $2 $3').replace(/♯/g,'sharp').replace(/♭/g,'flat').replace(/\s+/g,' '));pickEN();u.lang=EV?EV.lang:'en-US';if(EV)u.voice=EV;u.rate=.85;u.volume=+$('qVol').value/100;
+ let done=false,f=0;const fin=()=>{if(done)return;done=true;clearTimeout(f);res()};f=setTimeout(fin,Math.max(2500,u.text.length*110/u.rate)+1500);u.onend=u.onerror=fin;
+ speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){res()}});
 const code=it=>S.mode==='iv'?it.sub:it.name;
 function qKeys(){$('qKeys').textContent='Media ⏯ key = start/pause (works in background)  ·  Keys: '+pool().slice(0,10).map((it,i)=>((i+1)%10)+'='+code(it)).join('  ')}
 const tm=()=>new Date().toTimeString().slice(0,8);
 function row(a){const tr=document.createElement('tr');tr.innerHTML=a.map(()=>'<td></td>').join('');a.forEach((v,i)=>tr.children[i].textContent=v);return tr}
 function quietAsk(){if(!Q.on)return;Q.n++;newQ();const L=$('qLog');$('qNow')&&$('qNow').parentNode.remove();if(L.firstChild&&L.firstChild.dataset.p)L.firstChild.remove();const pr=row([tm(),Q.n,'…','pending']);pr.dataset.p=1;L.prepend(pr);const d=Math.max(...events(q.item,q.root,S.style[S.mode],q.dir).map(e=>e[1]));Q.t=setTimeout(quietReveal,(+$('qA').value+d+1)*1000)}
-function quietReveal(){if(!q)return;q.solved=true;mark(q.item,q.root);
+/* Reveal order: log the answer → speak it and wait until the voice ends → replay it (not for intervals)
+   and wait until it ends → only then count the Interval gap before the next question. */
+async function quietReveal(){if(!q)return;const g=Q.g,cur=q;q.solved=true;mark(q.item,q.root);
+ const live=()=>Q.on&&g===Q.g&&q===cur,wait=ms=>new Promise(r=>{Q.t=setTimeout(r,ms)});
  const L=$('qLog');if(L.firstChild&&L.firstChild.dataset.p)L.firstChild.remove();
  L.prepend(row([tm(),Q.n,code(q.item)+'  '+(S.mode==='pr'?keyName(q.item,q.root)+': '+chordNames(q.item,q.root):(S.mode==='iv'&&(q.dir||S.style.iv)==='Descending'?[...q.item.notes].reverse():q.item.notes).map(x=>nn(q.root+x)).join(S.mode==='iv'?((q.dir||S.style.iv)==='Descending'?' ↓ ':' ↑ '):'-')),q.res==='right'?'OK':q.res==='missed'?'Check':'Done']));while(L.children.length>18)L.lastChild.remove();
- sayName(S.mode==='pp'?nn(q.root+q.item.notes[0]):S.mode==='pr'?q.item.say:spoken(q.item.name));if(S.mode!=='iv')setTimeout(()=>Q.on&&play(),900);
+ await sayName(S.mode==='pp'?nn(q.root+q.item.notes[0]):S.mode==='pr'?q.item.say:spoken(q.item.name));if(!live())return;
+ if(S.mode!=='iv'){const E=events(q.item,q.root,S.style[S.mode],q.dir);sound(E,true);await wait(Math.max(...E.map(e=>e[1]+Math.min(e[2],1.5)))*1000+300);if(!live())return}
  Q.t=setTimeout(quietAsk,+$('qB').value*1000)}
-function quietStop(){Q.on=false;clearTimeout(Q.t);timers.forEach(clearTimeout);$('qGo').textContent='Start';const L=$('qLog');if(L.firstChild&&L.firstChild.dataset.p)L.firstChild.remove();mkSync()}
+function quietStop(){Q.on=false;Q.g++;clearTimeout(Q.t);try{speechSynthesis.cancel()}catch(e){}timers.forEach(clearTimeout);$('qGo').textContent='Start';const L=$('qLog');if(L.firstChild&&L.firstChild.dataset.p)L.firstChild.remove();mkSync()}
 /* Media keys: the keyboard's Play/Pause key reaches this page through the Media Session API,
    even when the tab or window is not focused. Chrome/Edge only route it to a page that has a
    playing (or paused) media element, so a looping silent WAV stands in for one. */
