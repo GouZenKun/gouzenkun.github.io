@@ -118,6 +118,10 @@ body.stealth{background:light-dark(#fff,#1e1e1e)}body.stealth #quiet{display:blo
     <select id="qMode" aria-label="Set"></select>
     <label id="qKeyL">Root <select id="qKey"><option value="">Random</option></select></label>
     <label id="qDirL">Direction <select id="qDir"><option>Ascending</option><option>Descending</option><option>Random</option></select></label>
+    <label id="qLoL">Low <select id="qLo"></select></label>
+    <label id="qHiL">High <select id="qHi"></select></label>
+    <label id="qSetL">Notes <select id="qSet"><option value="chromatic">Chromatic</option><option value="major">Major key</option><option value="minor">Minor key</option><option value="custom" hidden>Custom</option></select></label>
+    <label id="qPKeyL">Key <select id="qPKey"></select></label>
     <label>Hold <select id="qA"><option selected>3</option><option>5</option><option>8</option><option>12</option></select></label>
     <label><input type="checkbox" id="qSay" checked> Voice</label>
     <label>Vol <input type="range" id="qVol" min="0" max="100" value="45" aria-label="Volume"></label>
@@ -202,7 +206,8 @@ const MODES={
 };
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>'&#'+c.charCodeAt(0)+';');
-let S={mode:'iv',pool:{},style:{iv:'Ascending',ch:'Block',pr:'With bass',sc:'Up',pp:'All 88 keys'},stats:{iv:{},ch:{},pr:{},sc:{},pp:{}},best:0};
+let S={mode:'iv',pool:{},style:{iv:'Ascending',ch:'Block',pr:'With bass',sc:'Up',pp:'All 88 keys'},stats:{iv:{},ch:{},pr:{},sc:{},pp:{}},best:0,
+ ppLo:21,ppHi:108,ppSet:'chromatic',ppKey:0}; /* Set A (Log view): lowest/highest key, note set, key root */
 try{const s=JSON.parse(localStorage.getItem('ear-trainer')||'null');if(s)S={...S,...s,style:{...S.style,...s.style},stats:{...S.stats,...s.stats}};if(!MODES.pp.styles.includes(S.style.pp)||!localStorage.getItem('et88'))S.style.pp='All 88 keys';localStorage.setItem('et88','1')}catch(e){}
 for(const k in MODES)if(!S.pool[k])S.pool[k]=Object.values(MODES[k].presets)[0]||MODES[k].items.map(i=>i.id);
 try{if(!localStorage.getItem('et-fix2')){S.pool.iv=MODES.iv.items.map(i=>i.id);S.pool.pp=[...NM];S.style.pp='All 88 keys';localStorage.setItem('et-fix2','1');localStorage.setItem('et88b','1')}}catch(e){S.pool.iv=MODES.iv.items.map(i=>i.id);S.pool.pp=[...NM]}
@@ -250,11 +255,16 @@ const clearMarks=()=>Object.values(keys).forEach(k=>k.classList.remove('ans','ro
 /* game */
 const M=()=>MODES[S.mode],pool=()=>M().items.filter(i=>S.pool[S.mode].includes(i.id));
 function msg(t,s){$('msgT').textContent=t;$('msgS').textContent=s}
-function newQ(){const p=pool(),item=p[Math.floor(Math.random()*p.length)];
+function newQ(){
+ /* Set A in Log view: only ask notes that exist between Low and High. */
+ const lgPP=S.mode==='pp'&&document.body.classList.contains('stealth'),inR=it=>{for(let m=S.ppLo;m<=S.ppHi;m++)if(m%12===it.notes[0])return true;return false};
+ let p=pool();if(lgPP&&p.some(inR))p=p.filter(inR);const item=p[Math.floor(Math.random()*p.length)];
  if(q&&p.length>1&&item.id===q.item.id&&Math.random()<.6)return newQ();
  const top=Math.max(...item.notes);let root=52+Math.floor(Math.random()*Math.min(13,HI-top-51));
  if(S.mode==='iv'&&S.root)root=+S.root;
- if(S.mode==='pp'){const st=S.style.pp,pc=item.notes[0];if(st==='One octave')root=60;else if(st==='Three octaves')root=[48,60,72][Math.floor(Math.random()*3)];else{const c=[];for(let m=21;m<=108;m++)if(m%12===pc)c.push(m);root=c[Math.floor(Math.random()*c.length)]-pc}}
+ if(S.mode==='pp'){const st=S.style.pp,pc=item.notes[0],span=(a,b)=>{const c=[];for(let m=a;m<=b;m++)if(m%12===pc)c.push(m);return c};
+  if(lgPP){let c=span(S.ppLo,S.ppHi);if(!c.length)c=span(21,108);root=c[Math.floor(Math.random()*c.length)]-pc}
+  else if(st==='One octave')root=60;else if(st==='Three octaves')root=[48,60,72][Math.floor(Math.random()*3)];else{const c=span(21,108);root=c[Math.floor(Math.random()*c.length)]-pc}}
  const st=S.style[S.mode],dir=st==='Mixed'?['Ascending','Descending','Together'][Math.floor(Math.random()*3)]:st==='Random'?(Math.random()<.5?'Ascending':'Descending'):null;
  q={item,root,dir,solved:false,tries:0,wrong:[]};clearMarks();renderAnswers();$('next').hidden=true;
  msg('Which '+M().what+' was that?',dir?dir.toLowerCase():'Listen, then choose below');play()}
@@ -325,8 +335,21 @@ try{if('mediaSession' in navigator){navigator.mediaSession.metadata=new MediaMet
  const mk=on=>{if(document.body.classList.contains('stealth')&&Q.on!==on)$('qGo').click()};
  navigator.mediaSession.setActionHandler('play',()=>mk(true));navigator.mediaSession.setActionHandler('pause',()=>mk(false));
  try{navigator.mediaSession.setActionHandler('stop',()=>mk(false))}catch(e){}}}catch(e){}
-const keyUI=()=>{$('qKeyL').hidden=$('qDirL').hidden=$('qPr').hidden=S.mode!=='iv';if(['Ascending','Descending','Random'].includes(S.style.iv))$('qDir').value=S.style.iv;else{S.style.iv='Ascending';$('qDir').value='Ascending'}if(S.mode!=='iv'){$('qPrac').hidden=true;$('qPr').setAttribute('aria-pressed','false')}$('qKey').value=S.root||''};
+const keyUI=()=>{$('qKeyL').hidden=$('qDirL').hidden=$('qPr').hidden=S.mode!=='iv';if(['Ascending','Descending','Random'].includes(S.style.iv))$('qDir').value=S.style.iv;else{S.style.iv='Ascending';$('qDir').value='Ascending'}if(S.mode!=='iv'){$('qPrac').hidden=true;$('qPr').setAttribute('aria-pressed','false')}$('qKey').value=S.root||'';ppUI()};
 {let o='';for(let m=36;m<=84;m++)o+=`<option value="${m}">${nn(m)}</option>`;$('qKey').innerHTML+=o}
+/* Set A controls: Low/High bound the keys asked; Notes picks chromatic or the notes of a major/minor key.
+   Notes writes Set A's note selection (S.pool.pp), so Full view and the number-key answers follow it. */
+const PPSET={major:[0,2,4,5,7,9,11],minor:[0,2,3,5,7,8,10]};
+const ppPcs=()=>S.ppSet==='chromatic'?[...Array(12).keys()]:PPSET[S.ppSet].map(x=>(x+S.ppKey)%12);
+const ppMatch=()=>{const w=ppPcs().map(i=>NM[i]),cur=S.pool.pp;return w.length===cur.length&&w.every(x=>cur.includes(x))};
+function ppUI(){const on=S.mode==='pp';$('qLoL').hidden=$('qHiL').hidden=$('qSetL').hidden=!on;$('qLo').value=S.ppLo;$('qHi').value=S.ppHi;
+ const set=ppMatch()?S.ppSet:'custom';$('qSet').value=set;$('qPKeyL').hidden=!on||set==='chromatic'||set==='custom';$('qPKey').value=S.ppKey}
+function ppApply(){S.pool.pp=ppPcs().map(i=>NM[i]);save();renderAll();ppUI();qKeys()}
+{let o='';for(let m=LO;m<=HI;m++)o+=`<option value="${m}">${nn(m)}</option>`;$('qLo').innerHTML=$('qHi').innerHTML=o;$('qPKey').innerHTML=NM.map((n,i)=>`<option value="${i}">${n}</option>`).join('')}
+$('qLo').addEventListener('change',e=>{S.ppLo=+e.target.value;if(S.ppHi<S.ppLo)S.ppHi=S.ppLo;save();ppUI()});
+$('qHi').addEventListener('change',e=>{S.ppHi=+e.target.value;if(S.ppLo>S.ppHi)S.ppLo=S.ppHi;save();ppUI()});
+$('qSet').addEventListener('change',e=>{if(e.target.value==='custom')return;S.ppSet=e.target.value;ppApply()});
+$('qPKey').addEventListener('change',e=>{S.ppKey=+e.target.value;ppApply()});
 $('qDir').addEventListener('change',e=>{S.style.iv=e.target.value;save();renderSet()});
 $('qKey').addEventListener('change',e=>{S.root=e.target.value;save()});
 $('qPrac').innerHTML=MODES.iv.items.map(i=>`<button data-id="${i.id}" title="${i.name}">${i.id}</button>`).join('');
